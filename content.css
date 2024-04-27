@@ -1,12 +1,3 @@
-/*
-	Frank Kschischang's Content Page Style
-	frank@ece.utoronto.ca | www.comm.utoronto.ca/frank
-	created: May 19, 2017
-
-	place content in div, class "info"
-	place navigation in div, id "navigate"
-*/
-
 :root {
   --utoronto-blue: #25355a;
   --utoronto-grey: #c9c9c9;
@@ -44,6 +35,11 @@ h1 {
 h2 {
 	font-size: large;
 	color: var(--utoronto-green);
+}
+
+h3 {
+	font-size: small;
+	color: var(--utoronto-darkgrey);
 }
 
 a {
