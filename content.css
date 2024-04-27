@@ -1,0 +1,165 @@
+/*
+	Frank Kschischang's Content Page Style
+	frank@ece.utoronto.ca | www.comm.utoronto.ca/frank
+	created: May 19, 2017
+
+	place content in div, class "info"
+	place navigation in div, id "navigate"
+*/
+
+:root {
+  --utoronto-blue: #25355a;
+  --utoronto-grey: #c9c9c9;
+  --utoronto-darkgrey: #898989;
+  --utoronto-lightblue: #007fa3;
+  --utoronto-green: #00c389;
+  height:100%;
+}
+
+html, body { 
+	height: 100%;
+	font-family: Georgia,Lucida,Serif;
+	background-color: #ffffff;
+	font-size: 12pt;
+}
+
+@media screen and (max-width:520px)
+{
+   html, body {
+	   font-size: 10pt;
+   }
+}
+
+img.avatar {
+	float: right;
+	margin-left: 5px;
+	margin-bottom: 1px;
+}
+
+h1 {
+	font-size: x-large;
+	color: var(--utoronto-lightblue);
+}
+
+h2 {
+	font-size: large;
+	color: var(--utoronto-green);
+}
+
+a {
+	color: blue;
+	text-decoration: none;
+}
+
+table.withborder {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+table.withborder td
+{
+	border: 1px solid black;
+	padding: 2px;
+}
+table.withborder th
+{
+	border: 1px solid black;
+	padding: 2px;
+	text-align: left;
+}
+
+li ul li {
+	font-style:italic;
+	color: var(--utoronto-darkgrey);
+}
+
+span.title {
+	font-size:large;
+	color: var(--utoronto-lightblue);
+}
+
+div.nontitle {
+	margin-left: 25px;
+	color: var(--utoronto-darkgrey);
+}
+
+span.booktitle {
+	font-style:italic;
+}
+
+span.ref {
+	color: var(--utoronto-darkgrey);
+}
+
+ul.news li {
+	margin-bottom: 5px;
+}
+
+a.butt {     
+	display: inline-block;
+	color: var(--utoronto-darkgrey);
+	font-family: sans-serif;
+	width: 8.5ex;
+	text-align: center;
+        padding: 3px;
+	margin-left: 0px;
+	margin-right: 1ex;
+	margin-top: 1px;
+	margin-bottom: 2px;
+	text-decoration: none; 
+	font-size: medium;
+	border: 1px solid var(--utoronto-lightblue);
+	border-radius: 5px; }
+
+a.butt:hover { color: red}
+
+div.sidenav {
+	position: fixed;
+	top: 0px;
+	left: 15px;
+	height: 100%;
+	border-right: 1px solid red;
+}
+div.sidenav ul {
+	margin-top: 5px;
+	margin-left: 0;
+	padding: 0;
+	list-style-type: none;
+	}
+
+
+
+div.info {
+	position:static;
+	width:75%;
+	max-width:750px;
+	margin-top: 0em;
+	margin-left: 7.5em;
+	margin-right:0.5em;
+}
+@media screen and (max-width:520px)
+{
+   div.info {
+	width:100%;
+	margin-top: 0em;
+	margin-left: 0em;
+	margin-bottom: 2em;
+	}
+   div.sidenav { display: none };
+   div.botnav
+   {
+	   position: absolute;
+	   left: 0;
+	   width: 100%;
+   }
+   div.botnav a.butt { width:90%; }
+}
+
+@media screen and (min-width:521px)
+{
+   div.botnav {
+	   position: absolute;
+	   right: 5px;
+   }
+   div.botnav a.butt {display: none}
+}
