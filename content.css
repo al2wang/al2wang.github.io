@@ -28,17 +28,17 @@ img.avatar {
 }
 
 h1 {
-	font-size: x-large;
+	font-size: xx-large;
 	color: var(--utoronto-lightblue);
 }
 
 h2 {
-	font-size: large;
+	font-size: x-large;
 	color: var(--utoronto-green);
 }
 
 h3 {
-	font-size: small;
+	font-size: large;
 	color: var(--utoronto-darkgrey);
 }
 
