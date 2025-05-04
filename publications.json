@@ -1,53 +1,58 @@
 {
   "publications": [
     {
-      "title": "[Paper Title 1]",
-      "authors": [
-        "Author 1*",
-        "Author 2*",
-        "Author 3",
-        "Author 4",
-        "Author 5",
-        "Author 6",
-        "Author 7",
-        "Author 8",
-        "Author 9",
-        "Author 10",
-        "Author 11†",
-        "Author 12†"
-      ],
-      "venue": "Preprint (2025)",
-      "thumbnail": "images/thumbs/1.jpg",
-      "selected": 1,
-      "award": "",
-      "links": {
-        "pdf": "#",
-        "code": "#",
-        "project": "#"
-      }
-    },
+        "title": "Code as Reward: Empowering Reinforcement Learning with VLMs",
+        "authors": [
+              "David Venuto*",
+              "Mohammad Sami Nur Islam",
+              "Martin Klissarov",
+              "Doina Precup",
+              "Sherry Yang",
+              "Ankit Anand"
+            ],
+          "venue": "ICML (2024)",
+          "thumbnail": "images/thumbs/1.jpg",
+          "selected": 1,
+          "award": "Spotlight",
+          "links": {
+              "pdf": "https://arxiv.org/pdf/2402.04764",
+            }
+          },
+      {
+          "title": "Langevin Soft Actor-Critic: Efficient Exploration through Uncertainty-Driven Critic Learning",
+        "authors": [
+              "Haque Ishfaq*",
+              "Guangyuan Wang*",
+              "Mohammad Sami Nur Islam",
+              "Doina Precup"
+            ],
+          "venue": "ICLR (2025)",
+          "thumbnail": "images/thumbs/2.jpg",
+          "selected": 1,
+          "award": "",
+          "links": {
+              "pdf": "https://openreview.net/pdf?id=FvQsk3la17"
+            }
+          },
     {
-      "title": "[Paper Title 2]",
+        "title": "Scavenging Hyena: Distilling Transformers into Long Convolution Models",
       "authors": [
-        "Author 1*",
-        "Author 2*",
-        "Author 3",
-        "Author 4",
-        "Author 5",
-        "Author 6",
-        "Author 7",
-        "Author 8",
-        "Author 9",
-        "Author 10",
-        "Author 11"
-      ],
-      "venue": "Preprint (2025)",
-      "thumbnail": "images/thumbs/2.jpg",
-      "selected": 0,
-      "award": "",
-      "links": {
-        "pdf": "#"
-      }
+            "Tokiniaina Raharison Ralambomihanta*",
+            "Shahrad Mohammadzadeh*",
+            "Mohammad Sami Nur Islam",
+            "Wassim Jabbour",
+            "Laurence Liang"
+          ],
+        "venue": "ES-FoMO Workshop @ ICML 2024",
+        "thumbnail": "images/thumbs/3.jpg",
+        "selected": 0,
+        "award": "",
+        "links": {
+            "pdf": "https://arxiv.org/pdf/2401.17574",
+            "code": "#",
+            "project": "#"
+          }
     }
+
   ]
 }
