@@ -3,7 +3,7 @@
     {
         "title": "Code as Reward: Empowering Reinforcement Learning with VLMs",
         "authors": [
-              "David Venuto*",
+              "David Venuto",
               "Mohammad Sami Nur Islam",
               "Martin Klissarov",
               "Doina Precup",
@@ -37,8 +37,8 @@
     {
         "title": "Scavenging Hyena: Distilling Transformers into Long Convolution Models",
       "authors": [
-            "Tokiniaina Raharison Ralambomihanta*",
-            "Shahrad Mohammadzadeh*",
+            "Tokiniaina Raharison Ralambomihanta",
+            "Shahrad Mohammadzadeh",
             "Mohammad Sami Nur Islam",
             "Wassim Jabbour",
             "Laurence Liang"
