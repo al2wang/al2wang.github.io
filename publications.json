@@ -17,8 +17,8 @@
           "links": {
               "pdf": "https://arxiv.org/pdf/2402.04764",
             }
-          },
-      {
+    },
+    {
           "title": "Langevin Soft Actor-Critic: Efficient Exploration through Uncertainty-Driven Critic Learning",
         "authors": [
               "Haque Ishfaq*",
@@ -33,7 +33,7 @@
           "links": {
               "pdf": "https://openreview.net/pdf?id=FvQsk3la17"
             }
-          },
+    },
     {
         "title": "Scavenging Hyena: Distilling Transformers into Long Convolution Models",
       "authors": [
@@ -44,7 +44,7 @@
             "Laurence Liang"
           ],
         "venue": "ES-FoMO Workshop @ ICML 2024",
-        "thumbnail": "images/thumbs/3.jpg",
+        "thumbnail": "images/thumbs/2.jpg",
         "selected": 0,
         "award": "",
         "links": {
