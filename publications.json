@@ -1,21 +1,17 @@
 {
   "publications": [
     {
-        "title": "Code as Reward: Empowering Reinforcement Learning with VLMs",
+        "title": "High-dimensional isotropic scaling dynamics of Muon and SGD",
         "authors": [
-              "David Venuto",
-              "Mohammad Sami Nur Islam",
-              "Martin Klissarov",
-              "Doina Precup",
-              "Sherry Yang",
-              "Ankit Anand"
+              "Guangyuan Wang",
+              "Elliot Paquette",
+              "Atish Agarwala"
             ],
-          "venue": "ICML (2024)",
-          "thumbnail": "images/thumbs/1.jpg",
+          "venue": "OPT Workshop at NeurIPS (2025)",
           "selected": 1,
-          "award": "Spotlight",
+          "award": "Poster",
           "links": {
-              "pdf": "https://arxiv.org/pdf/2402.04764"
+              "pdf": "https://openreview.net/forum?id=6sh0yBvLr4&noteId=6sh0yBvLr4"
             }
     },
     {
