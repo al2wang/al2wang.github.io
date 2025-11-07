@@ -32,7 +32,7 @@
           }
     },
     {
-      "title": "Langevin Soft Actor-Critic: Efficient Exploration through Uncertainty-Driven Critic Learning",
+      "title": "Beyond Conservative Jacobians: Coderivative Calculus for the Lipschitz Stability of Implicit Networks",
         "authors": [
               "Guangyuan Wang",
               "Tim Hoheisel"
