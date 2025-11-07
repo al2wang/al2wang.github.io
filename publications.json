@@ -29,23 +29,6 @@
           "links": {
               "pdf": "https://openreview.net/pdf?id=FvQsk3la17"
             }
-    },
-    {
-        "title": "Scavenging Hyena: Distilling Transformers into Long Convolution Models",
-      "authors": [
-            "Tokiniaina Raharison Ralambomihanta",
-            "Shahrad Mohammadzadeh",
-            "Mohammad Sami Nur Islam",
-            "Wassim Jabbour",
-            "Laurence Liang"
-          ],
-        "venue": "ES-FoMO Workshop @ ICML 2024",
-        "thumbnail": "images/thumbs/3.jpg",
-        "award": "",
-        "links": {
-            "pdf": "https://arxiv.org/pdf/2401.17574"
-          }
     }
-
   ]
 }
