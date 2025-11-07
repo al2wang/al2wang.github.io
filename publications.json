@@ -26,10 +26,24 @@
           "venue": "ICLR (2025)",
           "thumbnail": "images/thumbs/lsac_algo.png",
           "selected": 1,
-          "award": "",
+          "award": "Poster",
           "links": {
               "pdf": "https://openreview.net/pdf?id=FvQsk3la17"
-            }
+          }
+    },
+    {
+      "title": "Langevin Soft Actor-Critic: Efficient Exploration through Uncertainty-Driven Critic Learning",
+        "authors": [
+              "Guangyuan Wang",
+              "Tim Hoheisel"
+            ],
+          "venue": "Preprint",
+          "thumbnail": "images/thumbs/lsac_algo.png",
+          "selected": 1,
+          "award": "Honours Thesis",
+          "links": {
+              "pdf": "https://al2wang.github.io/nonsmooth.pdf"
+          }
     }
   ]
 }
