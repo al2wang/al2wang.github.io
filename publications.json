@@ -7,7 +7,7 @@
               "Elliot Paquette",
               "Atish Agarwala"
             ], 
-          "venue": "OPT Workshop at NeurIPS (2025)",
+          "venue": "The 39th Conference on Neural Information Processing Systems (NeurIPS) 2025, Optimization for Machine Learning Workshop",
           "thumbnail": "images/thumbs/muon_algo.png",
           "selected": 1,
           "award": "Poster",
@@ -23,7 +23,7 @@
               "Mohammad Sami Nur Islam",
               "Doina Precup"
             ],
-          "venue": "ICLR (2025)",
+          "venue": "The 13th International Conference on Learning Representations (ICLR) 2025",
           "thumbnail": "images/thumbs/lsac_algo.png",
           "selected": 1,
           "award": "Poster",
@@ -37,7 +37,7 @@
               "Guangyuan Wang",
               "Tim Hoheisel"
             ],
-          "venue": "Preprint",
+          "venue": "Department of Mathematics and Statistics, McGill University",
           "thumbnail": "images/thumbs/lsac_algo.png",
           "selected": 1,
           "award": "Honours Thesis",
