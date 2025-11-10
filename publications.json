@@ -16,7 +16,7 @@
             }
     },
     {
-          "title": "Langevin Soft Actor-Critic: Efficient Exploration through Uncertainty-Driven Critic Learning",
+          "title": "Langevin Soft Actor-Critic: Efficient exploration through uncertainty-driven critic learning",
         "authors": [
               "Haque Ishfaq*",
               "Guangyuan Wang*",
@@ -32,7 +32,7 @@
           }
     },
     {
-      "title": "Beyond Conservative Jacobians: Coderivative Calculus for the Lipschitz Stability of Implicit Networks",
+      "title": "Beyond conservative Jacobians: A coderivative calculus for the Lipschitz stability of implicit networks",
         "authors": [
               "Guangyuan Wang",
               "Tim Hoheisel"
@@ -42,7 +42,7 @@
           "selected": 1,
           "award": "Honours Research Thesis",
           "links": {
-              "pdf": "https://al2wang.github.io/nonsmooth_alex_tim.pdf"
+              "pdf": "https://openreview.net/pdf?id=d1JZ2VvsrZ"
           }
     }
   ]
