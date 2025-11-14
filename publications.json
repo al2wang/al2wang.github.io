@@ -31,18 +31,18 @@
               "pdf": "https://openreview.net/pdf?id=FvQsk3la17"
           }
     },
-    // {
-    //   "title": "Beyond conservative Jacobians: Coderivative calculus for Lipschitz stability of implicit networks",
-    //     "authors": [
-    //           "Guangyuan Wang"
-    //         ],
-    //       "venue": "Department of Mathematics and Statistics, McGill University",
-    //       "thumbnail": "images/thumbs/lsac_algo.png",
-    //       "selected": 1,
-    //       "award": "Honours Research Thesis",
-    //       "links": {
-    //           "pdf": "https://openreview.net/pdf?id=d1JZ2VvsrZ"
-    //       }
-    // }
+    {
+      "title": "Beyond conservative Jacobians: Coderivative calculus for Lipschitz stability of implicit networks",
+        "authors": [
+              "Guangyuan Wang"
+            ],
+          "venue": "Department of Mathematics and Statistics, McGill University",
+          "thumbnail": "images/thumbs/lsac_algo.png",
+          "selected": 1,
+          "award": "Honours Research Thesis",
+          "links": {
+              "pdf": "https://openreview.net/pdf?id=d1JZ2VvsrZ"
+          }
+    }
   ]
 }
