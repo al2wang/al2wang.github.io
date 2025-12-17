@@ -36,12 +36,25 @@
         "authors": [
               "Guangyuan Wang"
             ],
-          "venue": "Honours Thesis in Computer Science",
+          "venue": "Mila -- Quebec AI Institute and School of Computer Science, McGill University",
           "thumbnail": "images/thumbs/lsac_algo.png",
           "selected": 1,
-          "award": "Honours Thesis",
+          "award": "Honours Research Thesis",
           "links": {
               "pdf": "https://al2wang.github.io/active_sampling_comp_400.pdf"
+          }
+    },
+    {
+        "title": "",
+        "authors": [
+              "Guangyuan Wang"
+            ],
+          "venue": "Department of Mathematics and Statistics, McGill University",
+          "thumbnail": "images/thumbs/lsac_algo.png",
+          "selected": 1,
+          "award": "Honours Research Thesis",
+          "links": {
+              "pdf": "https://al2wang.github.io/nonsmooth_preprint.pdf"
           }
     }
   ]
