@@ -30,6 +30,19 @@
           "links": {
               "pdf": "https://openreview.net/pdf?id=FvQsk3la17"
           }
+    },
+    {
+        "title": "Active Boltzmann Sampling: Uncertainty-Driven Exploration of High-Dimensional Energy Landscapes via Gaussian Process Surrogates",
+        "authors": [
+              "Guangyuan Wang"
+            ],
+          "venue": "Honours Thesis in Computer Science",
+          "thumbnail": "images/thumbs/lsac_algo.png",
+          "selected": 1,
+          "award": "Honours Thesis",
+          "links": {
+              "pdf": "https://al2wang.github.io/active_sampling_comp_400.pdf"
+          }
     }
   ]
 }
