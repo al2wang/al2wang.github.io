@@ -32,7 +32,7 @@
           }
     },
     {
-        "title": "Active Boltzmann Sampling: Uncertainty-Driven Exploration of High-Dimensional Energy Landscapes via Gaussian Process Surrogates",
+        "title": "Active Boltzmann Sampling: Uncertainty-driven exploration of high-dimensional energy landscapes via Gaussian process surrogates",
         "authors": [
               "Guangyuan Wang"
             ],
@@ -45,7 +45,7 @@
           }
     },
     {
-        "title": "Coderivatives Provide Sharp Lipschitz Bounds for Nonsmooth Implicit Deep Models",
+        "title": "Coderivatives provide sharp Lipschitz bounds for nonsmooth implicit deep models",
         "authors": [
               "Guangyuan Wang"
             ],
