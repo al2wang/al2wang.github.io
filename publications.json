@@ -8,11 +8,11 @@
               "Atish Agarwala"
             ], 
           "venue": "The 39th Conference on Neural Information Processing Systems (NeurIPS) 2025, OPT Workshop",
-          "thumbnail": "images/thumbs/muon_algo.png",
+          "thumbnail": "",
           "selected": 1,
           "award": "Poster",
           "links": {
-              "pdf": "https://al2wang.github.io/muon_preprint.pdf"
+              "pdf": "https://openreview.net/pdf?id=6sh0yBvLr4"
             }
     },
     {
