@@ -22,9 +22,9 @@ h3 {
 }
 
 #email-wrapper {
-  max-width: 900px;
-  padding-left: 15%;
-  padding-right: 15%;
+  max-width: 800px;
+  padding-left: 20%;
+  padding-right: 20%;
   color: #666;
   font-family: "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
 }
