@@ -38,12 +38,12 @@ body {
 }
 
 #body-wrapper {
-  max-width: 800px;
+  max-width: 600px;
   padding-left: 20%;
   padding-right: 20%;
 }
 #links {
-  padding-top: 2%;
+  padding-top: 20%;
   text-align: right;
 }
 a {
