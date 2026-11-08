@@ -48,9 +48,11 @@ Push to `main` to deploy through the existing GitHub Pages configuration.
 
 ## Credits
 
-The typography and portrait layout follow Jonas Hübotter's al-folio site.
+The layout follows Jonas Hübotter's al-folio site, with Libre Franklin typography
+as shown in the [Princeton Tiger theme font reference](https://sitebuilder.princeton.edu/themes-design/tiger-theme/fonts).
 The al-folio MIT license is retained in
-`assets/licenses/al-folio.txt`. Roboto is served locally; its SIL Open Font
+`assets/licenses/al-folio.txt`. Libre Franklin is served locally from
+`assets/fonts/libre-franklin-latin.woff2`; its SIL Open Font
 License is in `assets/fonts/OFL.txt`. The repository's existing MIT license is
 preserved in `LICENSE`.
 
@@ -63,3 +65,8 @@ is unchanged.
 Generation prompt:
 
 > Transform the reference portrait into a simple, friendly 2D cartoon avatar for an academic website. Preserve the person's recognizable dark side-swept hair, rectangular glasses, face shape, and light gray shirt. Use clean linework, soft flat colors, a subtle smile, and a plain warm off-white background. Center a head-and-shoulders portrait in a square crop. Remove earbud wires. No text, logos, props, or watermark.
+
+The displayed cartoon was then edited with the built-in imagegen tool to remove
+facial hair. Edit prompt:
+
+> Edit this cartoon portrait to remove the mustache completely. Make the entire upper lip and the skin around the mouth clean-shaven, with no mustache, beard, stubble, facial-hair strokes, or facial-hair shadow. Preserve the lips and smile. Change only the facial hair; keep the person's identity, face shape, eyes, eyebrows, glasses, hairstyle, gray shirt, pose, background, colors, illustration style, framing, and canvas dimensions unchanged.
