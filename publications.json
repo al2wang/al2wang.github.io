@@ -1,61 +1,66 @@
 {
   "publications": [
     {
-        "title": "High-dimensional isotropic scaling dynamics of Muon and SGD",
-        "authors": [
-              "Guangyuan Wang",
-              "Elliot Paquette",
-              "Atish Agarwala"
-            ], 
-          "venue": "The 39th Conference on Neural Information Processing Systems (NeurIPS) 2025, OPT Workshop",
-          "thumbnail": "",
-          "selected": 1,
-          "award": "Poster",
-          "links": {
-              "pdf": "https://openreview.net/pdf?id=6sh0yBvLr4"
-            }
+      "title": "High-dimensional isotropic scaling dynamics of Muon and SGD",
+      "authors": [
+        "Guangyuan Wang",
+        "Elliot Paquette",
+        "Atish Agarwala"
+      ],
+      "venue": "The 39th Conference on Neural Information Processing Systems (NeurIPS) 2025, OPT Workshop",
+      "selected": 1,
+      "award": "Poster",
+      "links": {
+        "pdf": "https://openreview.net/pdf?id=6sh0yBvLr4",
+        "poster": "slides/opt_poster.pdf"
+      },
+      "badge": "NeurIPS ’25",
+      "badge_detail": "OPT workshop"
     },
     {
-          "title": "Langevin Soft Actor-Critic: Efficient exploration through uncertainty-driven critic learning",
-        "authors": [
-              "Haque Ishfaq*",
-              "Guangyuan Wang*",
-              "Mohammad Sami Nur Islam",
-              "Doina Precup"
-            ],
-          "venue": "The 13th International Conference on Learning Representations (ICLR) 2025",
-          "thumbnail": "images/thumbs/lsac_algo.png",
-          "selected": 1,
-          "award": "Poster",
-          "links": {
-              "pdf": "https://openreview.net/pdf?id=FvQsk3la17"
-          }
+      "title": "Langevin Soft Actor-Critic: Efficient exploration through uncertainty-driven critic learning",
+      "authors": [
+        "Haque Ishfaq*",
+        "Guangyuan Wang*",
+        "Mohammad Sami Nur Islam",
+        "Doina Precup"
+      ],
+      "venue": "The 13th International Conference on Learning Representations (ICLR) 2025",
+      "selected": 1,
+      "award": "Poster",
+      "links": {
+        "pdf": "https://openreview.net/pdf?id=FvQsk3la17",
+        "poster": "https://hmishfaq.github.io/data/poster/poster_lsac.pdf"
+      },
+      "badge": "ICLR ’25"
     },
     {
-        "title": "Active Boltzmann Sampling: Uncertainty-driven exploration of high-dimensional energy landscapes via Gaussian process surrogates",
-        "authors": [
-              "Guangyuan Wang"
-            ],
-          "venue": "Mila - Québec AI Institute and School of Computer Science, McGill University",
-          "thumbnail": "images/thumbs/lsac_algo.png",
-          "selected": 1,
-          "award": "Honours Research Thesis",
-          "links": {
-              "pdf": "https://al2wang.github.io/active_sampling_comp_400.pdf"
-          }
+      "title": "Active Boltzmann Sampling: Uncertainty-driven exploration of high-dimensional energy landscapes via Gaussian process surrogates",
+      "authors": [
+        "Guangyuan Wang"
+      ],
+      "venue": "Mila - Québec AI Institute and School of Computer Science, McGill University",
+      "selected": 1,
+      "award": "Honours Research Thesis",
+      "links": {
+        "pdf": "active_sampling_comp_400.pdf"
+      },
+      "badge": "Thesis",
+      "badge_detail": "Computer science"
     },
     {
-        "title": "Coderivatives provide sharp Lipschitz bounds for nonsmooth implicit deep models",
-        "authors": [
-              "Guangyuan Wang"
-            ],
-          "venue": "Department of Mathematics and Statistics, McGill University",
-          "thumbnail": "images/thumbs/lsac_algo.png",
-          "selected": 1,
-          "award": "Honours Research Thesis",
-          "links": {
-              "pdf": "https://al2wang.github.io/nonsmooth_preprint.pdf"
-          }
+      "title": "Coderivatives provide sharp Lipschitz bounds for nonsmooth implicit deep models",
+      "authors": [
+        "Guangyuan Wang"
+      ],
+      "venue": "Department of Mathematics and Statistics, McGill University",
+      "selected": 1,
+      "award": "Honours Research Thesis",
+      "links": {
+        "pdf": "nonsmooth_preprint.pdf"
+      },
+      "badge": "Thesis",
+      "badge_detail": "Mathematics"
     }
   ]
 }

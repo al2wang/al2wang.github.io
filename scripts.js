@@ -1,203 +1,106 @@
-// Global variables
-let allPublications = [];
-let showingSelected = true;
+(function () {
+  'use strict';
 
-// Initialize the page
-document.addEventListener('DOMContentLoaded', function() {
-  // Load publications data
-  loadPublications();
-  
-  // Initialize animation delays for sections
-  const sections = document.querySelectorAll('section');
-  sections.forEach((section, index) => {
-    section.style.animationDelay = `${index * 0.1}s`;
-  });
-  
-  // Add event listener for toggle button
-  const toggleButton = document.getElementById('toggle-publications');
-  if (toggleButton) {
-    toggleButton.addEventListener('click', togglePublications);
+  const root = document.documentElement;
+  const themeButton = document.querySelector('.theme-toggle');
+  const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+  function isDark() {
+    return root.dataset.theme ? root.dataset.theme === 'dark' : systemTheme.matches;
   }
-});
 
-// Load publications from JSON file
-function loadPublications() {
-  fetch('publications.json')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`Network response was not ok: ${response.status}`);
+  function updateThemeButton() {
+    const label = isDark() ? 'Switch to light theme' : 'Switch to dark theme';
+    themeButton.setAttribute('aria-label', label);
+    themeButton.setAttribute('title', label);
+    themeButton.setAttribute('aria-pressed', String(isDark()));
+  }
+
+  if (themeButton) {
+    themeButton.hidden = false;
+    updateThemeButton();
+    themeButton.addEventListener('click', function () {
+      const theme = isDark() ? 'light' : 'dark';
+      root.dataset.theme = theme;
+      try {
+        localStorage.setItem('color-theme', theme);
+      } catch (error) {
+        // The theme still changes when browser storage is unavailable.
       }
-      return response.json();
-    })
-    .then(data => {
-      console.log("Publications loaded successfully:", data);
-      allPublications = data.publications;
-      renderPublications(true);
-    })
-    .catch(error => {
-      console.error('Error loading publications:', error);
-      // Create fallback publications display if JSON loading fails
-      displayFallbackPublications();
+      updateThemeButton();
     });
-}
-
-// Fallback if JSON loading fails
-function displayFallbackPublications() {
-  const container = document.getElementById('publications-container');
-  container.innerHTML = `Error loading publications.`;
-}
-
-// Toggle between showing all or selected publications
-function togglePublications() {
-  showingSelected = !showingSelected;
-  renderPublications(showingSelected);
-  
-  // Update button text
-  const toggleButton = document.getElementById('toggle-publications');
-  toggleButton.textContent = showingSelected ? 'Show All' : 'Show Selected';
-  const toggleHeader = document.getElementById('toggle-header');
-  toggleHeader.textContent = showingSelected ? 'Selected Publications and Preprints' : 'All Publications and Preprints';
-}
-
-// Render publications based on selection state
-function renderPublications(selectedOnly) {
-  const publicationsContainer = document.getElementById('publications-container');
-  publicationsContainer.innerHTML = '';
-  
-  const pubsToShow = selectedOnly ? 
-    allPublications.filter(pub => pub.selected === 1) : 
-    allPublications;
-  
-  pubsToShow.forEach(publication => {
-    const pubElement = createPublicationElement(publication);
-    publicationsContainer.appendChild(pubElement);
-  });
-}
-
-// Create HTML element for a publication
-function createPublicationElement(publication) {
-  const pubItem = document.createElement('div');
-  pubItem.className = 'publication-item';
-  
-  // Create thumbnail
-  const thumbnail = document.createElement('div');
-  thumbnail.className = 'pub-thumbnail';
-  thumbnail.onclick = () => openModal(publication.thumbnail);
-  
-  const thumbnailImg = document.createElement('img');
-  thumbnailImg.src = publication.thumbnail;
-  thumbnailImg.alt = `${publication.title} thumbnail`;
-  thumbnail.appendChild(thumbnailImg);
-  
-  // Create content container
-  const content = document.createElement('div');
-  content.className = 'pub-content';
-  
-  // Add title
-  const title = document.createElement('div');
-  title.className = 'pub-title';
-  title.textContent = publication.title;
-  content.appendChild(title);
-  
-  // Add authors with highlight
-  const authors = document.createElement('div');
-  authors.className = 'pub-authors';
-  
-  // Format authors with highlighting
-  let authorsHTML = '';
-  publication.authors.forEach((author, index) => {
-    if (author.includes('Guangyuan Wang')) { // TODO: Highlight specific author
-      authorsHTML += `<span class="highlight-name">${author}</span>`;
-    } else {
-      authorsHTML += author;
-    }
-    
-    if (index < publication.authors.length - 1) {
-      authorsHTML += ', ';
-    }
-  });
-  
-  authors.innerHTML = authorsHTML;
-  content.appendChild(authors);
-  
-  // Add venue with award if present
-  const venueContainer = document.createElement('div');
-  venueContainer.className = 'pub-venue-container';
-  
-  const venue = document.createElement('div');
-  venue.className = 'pub-venue';
-  venue.textContent = publication.venue;
-  venueContainer.appendChild(venue);
-  
-  // Add award if it exists
-  if (publication.award && publication.award.length > 0) {
-    const award = document.createElement('div');
-    award.className = 'pub-award';
-    award.textContent = publication.award;
-    venueContainer.appendChild(award);
+    systemTheme.addEventListener('change', updateThemeButton);
   }
-  
-  content.appendChild(venueContainer);
-  
-  // Add links if they exist
-  if (publication.links) {
-    const links = document.createElement('div');
-    links.className = 'pub-links';
-    
-    if (publication.links.pdf) {
-      const pdfLink = document.createElement('a');
-      pdfLink.href = publication.links.pdf;
-      pdfLink.textContent = '[PDF]';
-      links.appendChild(pdfLink);
+
+  const navigation = document.querySelector('.navigation');
+  const menuButton = document.querySelector('.menu-toggle');
+  const menu = document.getElementById('navigation-links');
+
+  if (navigation && menuButton && menu) {
+    navigation.dataset.enhanced = '';
+    menuButton.hidden = false;
+
+    function closeMenu() {
+      menu.classList.remove('is-open');
+      menuButton.setAttribute('aria-expanded', 'false');
     }
-    
-    if (publication.links.code) {
-      const codeLink = document.createElement('a');
-      codeLink.href = publication.links.code;
-      codeLink.textContent = '[Code]';
-      links.appendChild(codeLink);
+
+    menuButton.addEventListener('click', function () {
+      const open = menu.classList.toggle('is-open');
+      menuButton.setAttribute('aria-expanded', String(open));
+    });
+
+    menu.addEventListener('click', function (event) {
+      const link = event.target.closest('a');
+      if (!link) return;
+      closeMenu();
+      if (link.hash) {
+        const target = document.getElementById(link.hash.slice(1));
+        if (target) {
+          target.setAttribute('tabindex', '-1');
+          target.focus({ preventScroll: true });
+        }
+      }
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && menu.classList.contains('is-open')) {
+        closeMenu();
+        menuButton.focus();
+      }
+    });
+
+    const links = Array.from(menu.querySelectorAll('a[href^="#"]'));
+    const sections = links.map(function (link) {
+      return document.getElementById(link.hash.slice(1));
+    }).filter(Boolean);
+    let scrollPending = false;
+
+    function updateNavigation() {
+      let current = sections[0];
+      sections.forEach(function (section) {
+        if (section.getBoundingClientRect().top <= 140) current = section;
+      });
+      links.forEach(function (link) {
+        if (current && link.hash === '#' + current.id) {
+          link.setAttribute('aria-current', 'location');
+        } else {
+          link.removeAttribute('aria-current');
+        }
+      });
+      scrollPending = false;
     }
-    
-    if (publication.links.project) {
-      const projectLink = document.createElement('a');
-      projectLink.href = publication.links.project;
-      projectLink.textContent = '[Project Page]';
-      links.appendChild(projectLink);
-    }
-    
-    content.appendChild(links);
+
+    window.addEventListener('scroll', function () {
+      if (!scrollPending) {
+        scrollPending = true;
+        requestAnimationFrame(updateNavigation);
+      }
+    }, { passive: true });
+    window.addEventListener('hashchange', updateNavigation);
+    updateNavigation();
   }
-  
-  // Assemble the publication item
-  // pubItem.appendChild(thumbnail);  // TODO removed
-  pubItem.appendChild(content);
-  
-  return pubItem;
-}
 
-// Modal functionality for viewing original images
-function openModal(imageSrc) {
-  const modal = document.getElementById('imageModal');
-  const modalImg = document.getElementById('modalImage');
-  modal.style.display = "block";
-  setTimeout(() => {
-    modal.classList.add('show');
-  }, 10);
-  modalImg.src = imageSrc;
-}
-
-function closeModal() {
-  const modal = document.getElementById('imageModal');
-  modal.classList.remove('show');
-  setTimeout(() => {
-    modal.style.display = "none";
-  }, 300);
-}
-
-// Close modal when clicking outside the image
-window.onclick = function(event) {
-  const modal = document.getElementById('imageModal');
-  if (event.target == modal) {
-    closeModal();
-  }
-}
+  const year = document.getElementById('copyright-year');
+  if (year) year.textContent = String(new Date().getFullYear());
+}());
