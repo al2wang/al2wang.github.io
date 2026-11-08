@@ -83,6 +83,9 @@ def main():
     content = "\n".join(render_publication(publication) for publication in selected)
     homepage = ROOT / "index.html"
     original = homepage.read_text(encoding="utf-8")
+    if START not in original and END not in original:
+        print("The minimal homepage omits publications; no changes needed.")
+        return
     if original.count(START) != 1 or original.count(END) != 1:
         raise ValueError("The homepage must have exactly one pair of publication markers.")
     before, rest = original.split(START, 1)

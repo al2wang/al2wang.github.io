@@ -46,6 +46,9 @@
 html { scroll-padding-top: 5.5rem; }
 body {
   margin: 0;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
   background: var(--background);
   color: var(--text);
   font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -100,7 +103,7 @@ svg { width: 21px; height: 21px; fill: none; stroke: currentColor; stroke-width:
   :root:not([data-theme="light"]) .moon-icon { display: none; }
 }
 
-main.container { padding-top: 2.9rem; padding-bottom: 3.5rem; }
+main.container { flex: 1; padding-top: 2.9rem; padding-bottom: 3.5rem; }
 main > section + section { margin-top: 2.4rem; }
 .intro-header { margin-bottom: 1.3rem; }
 .intro-description { margin-bottom: 0; font-weight: 500; }
