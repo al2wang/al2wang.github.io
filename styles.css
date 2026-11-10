@@ -110,8 +110,7 @@ main > section + section { margin-top: 2.4rem; }
 .biography { display: flow-root; }
 .profile { float: right; width: 30%; margin: .2rem 0 1.2rem 1.6rem; }
 .profile img { display: block; width: 100%; height: auto; aspect-ratio: 1; border-radius: 4px; box-shadow: 0 2px 5px #0003; }
-.interest-list { margin: 0; padding-left: 1.25rem; }
-.interest-list li { padding-block: .2rem; }
+.interest-list { margin: 0; padding-left: 1.25rem; line-height: 1.45; }
 .interest-list li::marker { color: var(--accent); }
 .contact-links { display: flex; flex-wrap: wrap; gap: .2rem 1rem; padding: 0; margin: .25rem 0 0; list-style: none; }
 .contact-label { font-weight: 500; }
