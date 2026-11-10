@@ -16,6 +16,7 @@
   --divider: #e5e5e5;
   --badge-text: #fff;
   --focus: #6d0768;
+  --section-gap: 1.25rem;
 }
 
 :root[data-theme="dark"] {
@@ -104,13 +105,12 @@ svg { width: 21px; height: 21px; fill: none; stroke: currentColor; stroke-width:
 }
 
 main.container { flex: 1; padding-top: 2.9rem; padding-bottom: 3.5rem; }
-main > section + section { margin-top: 1.5rem; }
+main > section + section { margin-top: var(--section-gap); }
 .intro-header { margin-bottom: 1.3rem; }
 .intro-description { margin-bottom: 0; font-weight: 500; }
-.biography { display: flow-root; }
 .profile { float: right; width: 30%; margin: .2rem 0 1.2rem 1.6rem; }
 .profile img { display: block; width: 100%; height: auto; aspect-ratio: 1; border-radius: 4px; box-shadow: 0 2px 5px #0003; }
-.research-interests { margin-top: 1.5rem; }
+.research-interests { margin-top: var(--section-gap); }
 .interest-list { margin: 0; padding-left: 1.25rem; line-height: 1.45; }
 .interest-list li::marker { color: var(--accent); }
 .contact-links { display: flex; flex-wrap: wrap; gap: .2rem 1rem; padding: 0; margin: .25rem 0 0; list-style: none; }
