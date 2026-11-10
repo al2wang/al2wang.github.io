@@ -21,9 +21,9 @@ theme preference.
 
 ## Update content
 
-- The homepage currently shows only the name, one introductory sentence, and a
-  cartoon placeholder portrait. Edit the sentence in `index.html`; keep the
-  description and Open Graph description in sync.
+- The homepage currently shows the name, one introductory sentence, a cartoon
+  placeholder portrait, and a Research Interests list. Edit the sentence in
+  `index.html`; keep the description and Open Graph description in sync.
 - News, publications, talks, additional biography, and contact links are omitted.
   Existing PDFs and `publications.json` remain available for future updates.
 - `tools/render_publications.py` is inactive while the homepage has no publication
