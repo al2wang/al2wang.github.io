@@ -2,19 +2,19 @@
   "publications": [
     {
       "title": "Can Language Models Learn Forever? Stationarity and Plasticity Under Continual Pretraining",
-      "authors": ["Guangyuan Wang", "Guanning Zeng", "Yuda Song", "Andrea Zanette"],
+      "authors": [],
       "venue": "Under review, ICML 2027",
       "selected": true
     },
     {
       "title": "Inference on Ceilings: Chandelier Debiasing for Optimal Policy Value with Continuous Treatments under Preference Data",
-      "authors": ["Guangyuan Wang", "Junwei Lu"],
+      "authors": [],
       "venue": "Under review, ICML 2027",
       "selected": true
     },
     {
       "title": "ReflectAgents: Teaching Multimodal Agents to Say No",
-      "authors": ["Bo Gao", "Guangyuan Wang", "Guanning Zeng", "Andrea Zanette"],
+      "authors": [],
       "venue": "Under review, CVPR 2027",
       "selected": true
     },
@@ -47,7 +47,7 @@
     },
     {
       "title": "Safe, Self-Evolving, and Swift Coding Agent",
-      "authors": ["Guangyuan Wang", "Wei Deng", "Langlin Wan", "Yinling Zhang", "Shilong Liu"],
+      "authors": [],
       "venue": "Preprint. Under review, ICML 2027",
       "url": "https://sai-foundation.github.io/s-code-docs/",
       "selected": true

@@ -27,7 +27,8 @@ theme preference.
 - Publications live in `publications.json`. Each entry has `title`, `authors`,
   `venue`, an optional `url` (linked from the title), and `selected` (only selected
   entries are shown, in file order). Suffix an author with `*` for equal
-  contribution or `†` for equal advising. After editing, run
+  contribution or `†` for equal advising; use an empty `authors` list to
+  withhold authors (e.g. for anonymous review). After editing, run
   `python3 tools/render_publications.py` to regenerate the HTML between the
   `PUBLICATIONS:START` / `PUBLICATIONS:END` markers in `index.html`.
 - News, talks, additional biography, and contact links are omitted.

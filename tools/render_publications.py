@@ -45,11 +45,15 @@ def render_publication(publication):
     lines = [
         '<li id="{}">'.format(slug),
         '  <h3 class="publication-title">{}</h3>'.format(title),
-        '  <p class="publication-authors">{}</p>'.format(
-            ", ".join(render_author(author) for author in publication["authors"])),
+    ]
+    # An empty author list withholds authors (e.g. papers under anonymous review).
+    if publication.get("authors"):
+        lines.append('  <p class="publication-authors">{}</p>'.format(
+            ", ".join(render_author(author) for author in publication["authors"])))
+    lines.extend([
         '  <p class="publication-venue">{}</p>'.format(escape(publication["venue"])),
         "</li>",
-    ]
+    ])
     return indent("\n".join(lines), " " * 8)
 
 
