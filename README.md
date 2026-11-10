@@ -21,14 +21,16 @@ theme preference.
 
 ## Update content
 
-- The homepage currently shows the name, one introductory sentence, a cartoon
-  placeholder portrait, and a Research Interests list. Edit the sentence in
-  `index.html`; keep the description and Open Graph description in sync.
-- News, publications, talks, additional biography, and contact links are omitted.
-  Existing PDFs and `publications.json` remain available for future updates.
-- `tools/render_publications.py` is inactive while the homepage has no publication
-  markers. To restore publications, add the previous publication section with its
-  `PUBLICATIONS:START` / `PUBLICATIONS:END` markers, then run the renderer.
+- The homepage shows the name, one introductory sentence, a cartoon placeholder
+  portrait, a Research Interests list, and Publications and Preprints. Edit the
+  sentence in `index.html`; keep the description and Open Graph description in sync.
+- Publications live in `publications.json`. Each entry has `title`, `authors`,
+  `venue`, an optional `url` (linked from the title), and `selected` (only selected
+  entries are shown, in file order). Suffix an author with `*` for equal
+  contribution or `†` for equal advising. After editing, run
+  `python3 tools/render_publications.py` to regenerate the HTML between the
+  `PUBLICATIONS:START` / `PUBLICATIONS:END` markers in `index.html`.
+- News, talks, additional biography, and contact links are omitted.
 - The displayed portrait is `images/profile-placeholder.png`; the original photo
   is retained as `images/profile.jpg`. The existing `resume.pdf`
   belongs to the previous template's author and is intentionally not linked;

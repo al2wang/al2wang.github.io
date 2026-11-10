@@ -1,66 +1,112 @@
 {
   "publications": [
     {
-      "title": "High-dimensional isotropic scaling dynamics of Muon and SGD",
-      "authors": [
-        "Guangyuan Wang",
-        "Elliot Paquette",
-        "Atish Agarwala"
-      ],
-      "venue": "The 39th Conference on Neural Information Processing Systems (NeurIPS) 2025, OPT Workshop",
-      "selected": 1,
-      "award": "Poster",
-      "links": {
-        "pdf": "https://openreview.net/pdf?id=6sh0yBvLr4",
-        "poster": "slides/opt_poster.pdf"
-      },
-      "badge": "NeurIPS ’25",
-      "badge_detail": "OPT workshop"
+      "title": "Can Language Models Learn Forever? Stationarity and Plasticity Under Continual Pretraining",
+      "authors": ["Guangyuan Wang", "Guanning Zeng", "Yuda Song", "Andrea Zanette"],
+      "venue": "Under review, ICML 2027",
+      "selected": true
     },
     {
-      "title": "Langevin Soft Actor-Critic: Efficient exploration through uncertainty-driven critic learning",
-      "authors": [
-        "Haque Ishfaq*",
-        "Guangyuan Wang*",
-        "Mohammad Sami Nur Islam",
-        "Doina Precup"
-      ],
-      "venue": "The 13th International Conference on Learning Representations (ICLR) 2025",
-      "selected": 1,
-      "award": "Poster",
-      "links": {
-        "pdf": "https://openreview.net/pdf?id=FvQsk3la17",
-        "poster": "https://hmishfaq.github.io/data/poster/poster_lsac.pdf"
-      },
-      "badge": "ICLR ’25"
+      "title": "Inference on Ceilings: Chandelier Debiasing for Optimal Policy Value with Continuous Treatments under Preference Data",
+      "authors": ["Guangyuan Wang", "Junwei Lu"],
+      "venue": "Under review, ICML 2027",
+      "selected": true
+    },
+    {
+      "title": "ReflectAgents: Teaching Multimodal Agents to Say No",
+      "authors": ["Bo Gao", "Guangyuan Wang", "Guanning Zeng", "Andrea Zanette"],
+      "venue": "Under review, CVPR 2027",
+      "selected": true
+    },
+    {
+      "title": "When Should an Agent Refresh? Adaptive Index Reuse for Efficient Long-Horizon Agentic Reasoning",
+      "authors": ["Guangyuan Wang", "Yifan Zhang", "Shilong Liu"],
+      "venue": "Preprint. Under review, NAACL 2027",
+      "url": "https://arxiv.org/abs/2611.01429",
+      "selected": true
+    },
+    {
+      "title": "TAME: Transfer-Aware Model-Harness Co-Evolution through Learned Harness Revisions",
+      "authors": ["Guangyuan Wang", "Yifan Zhang", "Shilong Liu"],
+      "venue": "Preprint. Under review, ICLR 2027",
+      "selected": true
+    },
+    {
+      "title": "AIChipBench: State-Aware Evaluation of Coding Agents for AI Accelerators",
+      "authors": ["Guangyuan Wang", "Minchen Luo", "Chengran Li", "Jichen Feng", "Mengdi Wang†", "Yifan Zhang†"],
+      "venue": "Preprint. Under review, ICLR 2027",
+      "url": "https://openreview.net/forum?id=Qcpj94Y3zm",
+      "selected": true
+    },
+    {
+      "title": "Solving Reflected Diffusion Models: A Physics-Informed Approach",
+      "authors": ["Liyuan Xu*", "Guangyuan Wang*", "Junwei Lu"],
+      "venue": "Preprint, 2026",
+      "url": "https://openreview.net/pdf?id=XGuljQzFO9",
+      "selected": true
+    },
+    {
+      "title": "Safe, Self-Evolving, and Swift Coding Agent",
+      "authors": ["Guangyuan Wang", "Wei Deng", "Langlin Wan", "Yinling Zhang", "Shilong Liu"],
+      "venue": "Preprint. Under review, ICML 2027",
+      "url": "https://sai-foundation.github.io/s-code-docs/",
+      "selected": true
+    },
+    {
+      "title": "Physics of Coding Agents: Fit, Not Format at the Edit Interface",
+      "authors": ["Langlin Wan", "Zhixuan Liang", "Guangyuan Wang", "Shilong Liu"],
+      "venue": "Preprint. Under review, FSE 2026",
+      "url": "https://www.preprints.org/manuscript/202610.1889",
+      "selected": true
+    },
+    {
+      "title": "Learning Where to Constrain: Meta-Learned Trust Allocation for LLM RL Reasoning",
+      "authors": ["Guangyuan Wang", "Padideh Nouri", "Doina Precup"],
+      "venue": "Math Reasoning and AI Workshop, NeurIPS 2026",
+      "url": "https://openreview.net/pdf?id=n1ceQKZApq",
+      "selected": true
+    },
+    {
+      "title": "SS-ESOAP: Self-Scaled Adaptive Preconditioning for Physics-Informed Learning",
+      "authors": ["Guangyuan Wang", "Mads Toftrup", "Sebastian Loeschcke", "Yixuan Wang", "Anima Anandkumar"],
+      "venue": "Preprint, 2026. Under review at JMLR",
+      "url": "https://www.alphaxiv.org/abs/2608.29448",
+      "selected": true
+    },
+    {
+      "title": "Phases of Muon: When Muon Eclipses SignSGD",
+      "authors": ["Elliot Paquette", "Noah Marshall", "Lucas Benigni", "Guangyuan Wang", "Atish Agarwala", "Courtney Paquette"],
+      "venue": "NeurIPS 2026",
+      "url": "https://arxiv.org/abs/2605.09552",
+      "selected": true
+    },
+    {
+      "title": "High-Dimensional Isotropic Scaling Dynamics of Muon and SGD",
+      "authors": ["Guangyuan Wang", "Elliot Paquette", "Atish Agarwala"],
+      "venue": "Optimization for Machine Learning Workshop, NeurIPS 2025",
+      "url": "https://openreview.net/pdf?id=6sh0yBvLr4",
+      "selected": true
+    },
+    {
+      "title": "Langevin Soft Actor-Critic: Efficient Exploration through Uncertainty-Driven Critic Learning",
+      "authors": ["Haque Ishfaq*", "Guangyuan Wang*", "Sami Nur Islam", "Doina Precup"],
+      "venue": "ICLR 2025",
+      "url": "https://openreview.net/pdf?id=FvQsk3la17",
+      "selected": true
     },
     {
       "title": "Active Boltzmann Sampling: Uncertainty-driven exploration of high-dimensional energy landscapes via Gaussian process surrogates",
-      "authors": [
-        "Guangyuan Wang"
-      ],
-      "venue": "Mila - Québec AI Institute and School of Computer Science, McGill University",
-      "selected": 1,
-      "award": "Honours Research Thesis",
-      "links": {
-        "pdf": "active_sampling_comp_400.pdf"
-      },
-      "badge": "Thesis",
-      "badge_detail": "Computer science"
+      "authors": ["Guangyuan Wang"],
+      "venue": "Honours Research Thesis, Mila - Québec AI Institute and School of Computer Science, McGill University",
+      "url": "active_sampling_comp_400.pdf",
+      "selected": false
     },
     {
       "title": "Coderivatives provide sharp Lipschitz bounds for nonsmooth implicit deep models",
-      "authors": [
-        "Guangyuan Wang"
-      ],
-      "venue": "Department of Mathematics and Statistics, McGill University",
-      "selected": 1,
-      "award": "Honours Research Thesis",
-      "links": {
-        "pdf": "nonsmooth_preprint.pdf"
-      },
-      "badge": "Thesis",
-      "badge_detail": "Mathematics"
+      "authors": ["Guangyuan Wang"],
+      "venue": "Honours Research Thesis, Department of Mathematics and Statistics, McGill University",
+      "url": "nonsmooth_preprint.pdf",
+      "selected": false
     }
   ]
 }

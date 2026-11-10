@@ -13,13 +13,9 @@ from urllib.parse import urlsplit
 ROOT = Path(__file__).resolve().parent.parent
 START = "        <!-- PUBLICATIONS:START -->"
 END = "        <!-- PUBLICATIONS:END -->"
-LINK_LABELS = {
-    "pdf": "PDF",
-    "code": "Code",
-    "project": "Project",
-    "poster": "Poster",
-    "slides": "Slides",
-}
+SELF = "Guangyuan Wang"
+# Trailing author marks: * equal contribution, † equal advising.
+AUTHOR_MARKS = "*†"
 
 
 def link_url(value):
@@ -30,47 +26,30 @@ def link_url(value):
     return escape(value, quote=True)
 
 
+def render_author(author):
+    name = author.rstrip(AUTHOR_MARKS)
+    formatted = escape(name)
+    if name == SELF:
+        formatted = '<span class="self">{}</span>'.format(formatted)
+    marks = author[len(name):]
+    if marks:
+        formatted += "<sup>{}</sup>".format(escape(marks))
+    return formatted
+
+
 def render_publication(publication):
     title = escape(publication["title"])
-    links = publication.get("links", {})
-    title_html = (
-        '<a href="{}">{}</a>'.format(link_url(links["pdf"]), title)
-        if links.get("pdf") else title
-    )
-    authors = []
-    for author in publication["authors"]:
-        name = author.rstrip("*")
-        formatted = escape(name)
-        if name == "Guangyuan Wang":
-            formatted = '<span class="self">{}</span>'.format(formatted)
-        if author.endswith("*"):
-            formatted += "<sup>{}</sup>".format("*" * (len(author) - len(name)))
-        authors.append(formatted)
-
+    if publication.get("url"):
+        title = '<a href="{}">{}</a>'.format(link_url(publication["url"]), title)
     slug = re.sub(r"[^a-z0-9]+", "-", publication["title"].lower()).strip("-")
     lines = [
-        '<li class="publication" id="{}">'.format(slug),
-        '  <div class="publication-badges">',
-        '    <span class="venue-badge">{}</span>'.format(escape(publication.get("badge", "Research"))),
+        '<li id="{}">'.format(slug),
+        '  <h3 class="publication-title">{}</h3>'.format(title),
+        '  <p class="publication-authors">{}</p>'.format(
+            ", ".join(render_author(author) for author in publication["authors"])),
+        '  <p class="publication-venue">{}</p>'.format(escape(publication["venue"])),
+        "</li>",
     ]
-    if publication.get("badge_detail"):
-        lines.append('    <span class="badge-detail">{}</span>'.format(escape(publication["badge_detail"])))
-    lines.extend([
-        "  </div>",
-        '  <div class="publication-content">',
-        '    <h3 class="publication-title">{}</h3>'.format(title_html),
-        '    <p class="publication-authors">{}</p>'.format(", ".join(authors)),
-        '    <p class="publication-venue">{}</p>'.format(escape(publication["venue"])),
-    ])
-    if publication.get("award"):
-        lines.append('    <span class="publication-award">{}</span>'.format(escape(publication["award"])))
-    resource_links = [
-        '      <a class="resource-link" href="{}">{}</a>'.format(link_url(links[key]), label)
-        for key, label in LINK_LABELS.items() if links.get(key)
-    ]
-    if resource_links:
-        lines.extend(['    <div class="publication-links">'] + resource_links + ["    </div>"])
-    lines.extend(["  </div>", "</li>"])
     return indent("\n".join(lines), " " * 8)
 
 
