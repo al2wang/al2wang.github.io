@@ -16,7 +16,7 @@
   --divider: #e5e5e5;
   --badge-text: #fff;
   --focus: #6d0768;
-  --section-gap: 1.25rem;
+  --section-gap: 1.75rem;
 }
 
 :root[data-theme="dark"] {
