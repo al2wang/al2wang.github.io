@@ -1,0 +1,31 @@
+% Can Language Models Learn Forever? Stationarity and Plasticity Under Continual Pretraining
+% An endless data stream feeds one language model, which must balance plasticity and stationarity.
+\documentclass[tikz,border=0pt]{standalone}
+\input{thumbstyle}
+\begin{document}
+\begin{tikzpicture}
+\thumbcanvas
+% Data stream: older shards fade, the stream never ends.
+\foreach \c [count=\i from 0] in {teal,teal,violet,violet,accent,accent,orange,orange,sun,leaf,teal} {
+  \pgfmathsetmacro{\op}{0.22+0.078*\i}
+  \fill[\c, opacity=\op, rounded corners=4pt] ({0.7+\i*1.08},1.0) rectangle ++(0.86,0.86);
+}
+\draw[arrow=ink!45] (0.7,0.55) -- (12.5,0.55);
+\node[text=accent] at (14.2,1.25) {\icon[46]{infinity}};
+% The language model: a stack of layers.
+\foreach \c [count=\k from 0] in {violet,teal,accent,orange} {
+  \draw[line width=1.4pt, draw=\c!80!black, fill=\c!18, rounded corners=7pt]
+    (5.9,{3.9+\k*0.86}) rectangle (10.1,{4.55+\k*0.86});
+  \foreach \n in {0,...,4} \fill[\c!80!black] ({6.6+\n*0.7},{4.225+\k*0.86}) circle (0.09);
+}
+\draw[arrow=ink!55] (8,2.1) -- (8,3.75);
+% The two competing goals.
+\node[badge=leaf] (P) at (2.6,6.6) {\icon{seedling}};
+\node[text=ink] at (2.6,4.75) {\lbl{plasticity}};
+\node[badge=teal] (S) at (13.4,6.6) {\icon{anchor}};
+\node[text=ink] at (13.4,4.75) {\lbl{stationarity}};
+\draw[line width=1.8pt, dashed, ink!35] (P.east) -- (5.75,6.6);
+\draw[line width=1.8pt, dashed, ink!35] (S.west) -- (10.25,6.6);
+\node[text=ink!70] at (8,8.85) {\lbl{learn forever?}};
+\end{tikzpicture}
+\end{document}

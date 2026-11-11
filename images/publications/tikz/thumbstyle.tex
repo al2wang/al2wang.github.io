@@ -1,0 +1,35 @@
+% Shared look for the TikZ publication thumbnails.
+% Canvas: 16cm x 10cm (16:10, matching the 640x400 WebP output), white, site palette.
+% Labels are large (\lbl) because thumbnails are shown about 200px wide.
+\usepackage[T1]{fontenc}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{amsmath,amssymb}
+\usepackage{fontawesome5}
+\usetikzlibrary{arrows.meta,calc,positioning,shapes.geometric,shapes.callouts,decorations.pathmorphing,shadows}
+
+\definecolor{ink}{HTML}{2B2D42}
+\definecolor{accent}{HTML}{B509AC}
+\definecolor{teal}{HTML}{1E9BC0}
+\definecolor{violet}{HTML}{6C5CE7}
+\definecolor{orange}{HTML}{F28C28}
+\definecolor{sun}{HTML}{F2C14E}
+\definecolor{leaf}{HTML}{2CA58D}
+\definecolor{alert}{HTML}{E5484D}
+\definecolor{mist}{HTML}{EEF0F5}
+
+\tikzset{
+  every picture/.append style={line cap=round, line join=round},
+  card/.style={rounded corners=10pt, draw=#1!75!black, line width=1.4pt, fill=#1!12},
+  arrow/.style={-{Stealth[length=10pt,width=9pt]}, line width=2.2pt, draw=#1},
+  soft shadow/.style={drop shadow={shadow xshift=0pt, shadow yshift=-3pt, opacity=0.18, fill=ink}},
+  badge/.style={circle, fill=#1!14, draw=#1, line width=2pt, minimum size=2.3cm, text=#1},
+}
+\newcommand{\thumbcanvas}{\useasboundingbox[fill=white] (0,0) rectangle (16,10);}
+\newcommand{\lbl}[1]{{\fontsize{20}{22}\selectfont\bfseries #1}}
+\newcommand{\icon}[2][34]{{\fontsize{#1}{#1}\selectfont\faIcon{#2}}}
+% Window chrome: dark editor panel with traffic-light dots. Args: x0, y0, x1, y1.
+\newcommand{\editor}[4]{%
+  \fill[ink, rounded corners=12pt, soft shadow] (#1,#2) rectangle (#3,#4);
+  \foreach \c [count=\k] in {alert,sun,leaf} \fill[\c] ({#1+0.15+0.42*\k},{#4-0.42}) circle (0.13);
+}

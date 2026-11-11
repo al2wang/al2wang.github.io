@@ -2,24 +2,28 @@
   "publications": [
     {
       "title": "Can Language Models Learn Forever? Stationarity and Plasticity Under Continual Pretraining",
+      "thumbnail": "images/publications/continual-pretraining.webp",
       "authors": [],
       "venue": "Under review, ICML 2027",
       "selected": true
     },
     {
       "title": "Inference on Ceilings: Chandelier Debiasing for Optimal Policy Value with Continuous Treatments under Preference Data",
+      "thumbnail": "images/publications/chandelier-debiasing.webp",
       "authors": [],
       "venue": "Under review, ICML 2027",
       "selected": true
     },
     {
       "title": "ReflectAgents: Teaching Multimodal Agents to Say No",
+      "thumbnail": "images/publications/reflectagents.webp",
       "authors": [],
       "venue": "Preprint. Under review, CVPR 2027",
       "selected": true
     },
     {
       "title": "When Should an Agent Refresh? Adaptive Index Reuse for Efficient Long-Horizon Agentic Reasoning",
+      "thumbnail": "images/publications/adaptive-index-reuse.webp",
       "authors": ["Guangyuan Wang", "Yifan Zhang", "Shilong Liu"],
       "venue": "Preprint. Under review, NAACL 2027",
       "url": "https://arxiv.org/abs/2611.01429",
@@ -27,12 +31,14 @@
     },
     {
       "title": "TAME: Transfer-Aware Model-Harness Co-Evolution through Learned Harness Revisions",
+      "thumbnail": "images/publications/tame.webp",
       "authors": ["Guangyuan Wang", "Yifan Zhang", "Shilong Liu"],
       "venue": "Preprint. Under review, ICLR 2027",
       "selected": true
     },
     {
       "title": "AIChipBench: State-Aware Evaluation of Coding Agents for AI Accelerators",
+      "thumbnail": "images/publications/aichipbench.webp",
       "authors": ["Guangyuan Wang", "Minchen Luo", "Chengran Li", "Jichen Feng", "Mengdi Wang†", "Yifan Zhang†"],
       "venue": "Preprint. Under review, ICLR 2027",
       "url": "https://openreview.net/forum?id=Qcpj94Y3zm",
@@ -40,6 +46,7 @@
     },
     {
       "title": "Solving Reflected Diffusion Models: A Physics-Informed Approach",
+      "thumbnail": "images/publications/reflected-diffusion.webp",
       "authors": ["Liyuan Xu*", "Guangyuan Wang*", "Junwei Lu"],
       "venue": "Preprint, 2026",
       "url": "https://openreview.net/pdf?id=XGuljQzFO9",
@@ -47,13 +54,15 @@
     },
     {
       "title": "Safe, Self-Evolving, and Swift Coding Agent",
+      "thumbnail": "images/publications/s-code.webp",
       "authors": [],
       "venue": "Preprint. Under review, ICML 2027",
-      "url": "https://sai-foundation.github.io/s-code-docs/",
+      "url": "https://sai-foundation.github.io/s-code-docs/docs/privacy-security-comparison/",
       "selected": true
     },
     {
       "title": "Physics of Coding Agents: Fit, Not Format at the Edit Interface",
+      "thumbnail": "images/publications/physics-of-coding-agents.webp",
       "authors": ["Langlin Wan", "Zhixuan Liang", "Guangyuan Wang", "Shilong Liu"],
       "venue": "Preprint. Under review, FSE 2026",
       "url": "https://www.preprints.org/manuscript/202610.1889",
@@ -61,6 +70,7 @@
     },
     {
       "title": "Learning Where to Constrain: Meta-Learned Trust Allocation for LLM RL Reasoning",
+      "thumbnail": "images/publications/meta-trust.webp",
       "authors": ["Guangyuan Wang", "Padideh Nouri", "Doina Precup"],
       "venue": "Math Reasoning and AI Workshop, NeurIPS 2026",
       "url": "https://openreview.net/pdf?id=n1ceQKZApq",
@@ -68,6 +78,7 @@
     },
     {
       "title": "SS-ESOAP: Self-Scaled Adaptive Preconditioning for Physics-Informed Learning",
+      "thumbnail": "images/publications/ss-esoap.webp",
       "authors": ["Guangyuan Wang", "Mads Toftrup", "Sebastian Loeschcke", "Yixuan Wang", "Anima Anandkumar"],
       "venue": "Preprint, 2026. Under review at JMLR",
       "url": "https://www.alphaxiv.org/abs/2608.29448",
@@ -75,6 +86,7 @@
     },
     {
       "title": "Phases of Muon: When Muon Eclipses SignSGD",
+      "thumbnail": "images/publications/phases-of-muon.webp",
       "authors": ["Elliot Paquette", "Noah Marshall", "Lucas Benigni", "Guangyuan Wang", "Atish Agarwala", "Courtney Paquette"],
       "venue": "NeurIPS 2026",
       "url": "https://arxiv.org/abs/2605.09552",
@@ -82,6 +94,7 @@
     },
     {
       "title": "High-Dimensional Isotropic Scaling Dynamics of Muon and SGD",
+      "thumbnail": "images/publications/isotropic-scaling-muon.webp",
       "authors": ["Guangyuan Wang", "Elliot Paquette", "Atish Agarwala"],
       "venue": "Optimization for Machine Learning Workshop, NeurIPS 2025",
       "url": "https://openreview.net/pdf?id=6sh0yBvLr4",
@@ -89,6 +102,7 @@
     },
     {
       "title": "Langevin Soft Actor-Critic: Efficient Exploration through Uncertainty-Driven Critic Learning",
+      "thumbnail": "images/publications/langevin-sac.webp",
       "authors": ["Haque Ishfaq*", "Guangyuan Wang*", "Sami Nur Islam", "Doina Precup"],
       "venue": "ICLR 2025",
       "url": "https://openreview.net/pdf?id=FvQsk3la17",

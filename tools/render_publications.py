@@ -16,6 +16,8 @@ END = "        <!-- PUBLICATIONS:END -->"
 SELF = "Guangyuan Wang"
 # Trailing author marks: * equal contribution, † equal advising.
 AUTHOR_MARKS = "*†"
+# Thumbnails are 16:10 images; see tools/make_thumbnail.py.
+THUMB_WIDTH, THUMB_HEIGHT = 640, 400
 
 
 def link_url(value):
@@ -37,6 +39,24 @@ def render_author(author):
     return formatted
 
 
+def render_thumbnail(publication):
+    """A figure linked to the paper, or a text card when no figure is available yet."""
+    image = publication.get("thumbnail")
+    if image:
+        inner = '<img src="{}" alt="" width="{}" height="{}" loading="lazy" decoding="async">'.format(
+            link_url(image), THUMB_WIDTH, THUMB_HEIGHT)
+        classes = "publication-thumb"
+    else:
+        label = publication.get("short_title") or publication["title"].split(":")[0]
+        inner = "<span>{}</span>".format(escape(label))
+        classes = "publication-thumb publication-thumb--placeholder"
+    # The title link carries the accessible name; the thumbnail duplicates it visually.
+    if publication.get("url"):
+        return '<a class="{}" href="{}" tabindex="-1" aria-hidden="true">{}</a>'.format(
+            classes, link_url(publication["url"]), inner)
+    return '<div class="{}" aria-hidden="true">{}</div>'.format(classes, inner)
+
+
 def render_publication(publication):
     title = escape(publication["title"])
     if publication.get("url"):
@@ -44,14 +64,17 @@ def render_publication(publication):
     slug = re.sub(r"[^a-z0-9]+", "-", publication["title"].lower()).strip("-")
     lines = [
         '<li id="{}">'.format(slug),
-        '  <h3 class="publication-title">{}</h3>'.format(title),
+        "  " + render_thumbnail(publication),
+        '  <div class="publication-body">',
+        '    <h3 class="publication-title">{}</h3>'.format(title),
     ]
     # An empty author list withholds authors (e.g. papers under anonymous review).
     if publication.get("authors"):
-        lines.append('  <p class="publication-authors">{}</p>'.format(
+        lines.append('    <p class="publication-authors">{}</p>'.format(
             ", ".join(render_author(author) for author in publication["authors"])))
     lines.extend([
-        '  <p class="publication-venue">{}</p>'.format(escape(publication["venue"])),
+        '    <p class="publication-venue">{}</p>'.format(escape(publication["venue"])),
+        "  </div>",
         "</li>",
     ])
     return indent("\n".join(lines), " " * 8)

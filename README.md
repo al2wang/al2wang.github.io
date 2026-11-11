@@ -31,6 +31,14 @@ theme preference.
   withhold authors (e.g. for anonymous review). After editing, run
   `python3 tools/render_publications.py` to regenerate the HTML between the
   `PUBLICATIONS:START` / `PUBLICATIONS:END` markers in `index.html`.
+- Each publication can set `thumbnail` to a 640x400 (16:10) WebP in
+  `images/publications/`; entries without one show a text card (`short_title`, or
+  the title before its colon). Make thumbnails with `tools/make_thumbnail.py`,
+  either from a figure region in a PDF (`--page`, `--rect` in PDF points) or from
+  a PNG/JPG. Schematic thumbnails are TikZ drawings in
+  `images/publications/tikz/` (shared style in `thumbstyle.tex`); rebuild them
+  with `tools/build_tikz_thumbnails.sh`. Both tools need PyMuPDF and Pillow, and
+  the TikZ build needs `pdflatex` with `fontawesome5`.
 - News, talks, additional biography, and contact links are omitted.
 - The displayed portrait is `images/profile-placeholder.png`; the original photo
   is retained as `images/profile.jpg`. The existing `resume.pdf`

@@ -1,0 +1,27 @@
+% Learning Where to Constrain: Meta-Learned Trust Allocation for LLM RL Reasoning
+% A meta-learner allocates how tightly each step of a reasoning trace is constrained (illustrative widths, not data).
+\documentclass[tikz,border=0pt]{standalone}
+\input{thumbstyle}
+\begin{document}
+\begin{tikzpicture}
+\thumbcanvas
+\node[badge=violet, minimum size=1.9cm] (M) at (8.0,8.75) {\icon[30]{brain}};
+\foreach \h [count=\i from 0] in {1.3,0.45,1.75,0.4,1.0,1.95,0.6,1.45,0.8} {
+  \pgfmathsetmacro{\x}{1.65+\i*1.6}
+  \pgfmathtruncatemacro{\p}{(\h-0.4)/(1.95-0.4)*100}
+  \colorlet{band}{teal!\p!accent}
+  % Meta-learner assigns a trust width to this step.
+  \draw[violet!35, line width=1.2pt, dashed] (M.south) -- (\x,{4.75+\h+0.15});
+  % Trust interval around the step.
+  \fill[band!20, rounded corners=4pt] ({\x-0.45},{4.6-\h}) rectangle ({\x+0.45},{4.6+\h});
+  \draw[band, line width=2.4pt] (\x,{4.6-\h}) -- (\x,{4.6+\h});
+  \draw[band, line width=2.4pt] ({\x-0.28},{4.6-\h}) -- ({\x+0.28},{4.6-\h}) ({\x-0.28},{4.6+\h}) -- ({\x+0.28},{4.6+\h});
+  \fill[band] (\x,4.6) circle (0.13);
+  \draw[ink!20, line width=1.2pt, dotted] (\x,{4.6-\h}) -- (\x,1.95);
+  % Reasoning step.
+  \fill[mist, rounded corners=5pt] ({\x-0.62},0.8) rectangle ({\x+0.62},1.85);
+  \draw[ink!30, line width=1.2pt, rounded corners=5pt] ({\x-0.62},0.8) rectangle ({\x+0.62},1.85);
+  \fill[ink!35, rounded corners=1.5pt] ({\x-0.38},1.22) rectangle ({\x+0.38},1.43);
+}
+\end{tikzpicture}
+\end{document}

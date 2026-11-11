@@ -1,0 +1,42 @@
+% TAME: Transfer-Aware Model-Harness Co-Evolution through Learned Harness Revisions
+% A model and its harness co-evolve through learned revisions; the revised harness transfers to a new model.
+\documentclass[tikz,border=0pt]{standalone}
+\input{thumbstyle}
+\newcommand{\mininet}[3]{% center x, center y, color
+  \foreach \ya in {-0.9,0,0.9} \foreach \yb in {-1.35,-0.45,0.45,1.35} {
+    \draw[#3!45, line width=0.9pt] ({#1-0.95},{#2+\ya}) -- ({#1},{#2+\yb});
+    \draw[#3!45, line width=0.9pt] ({#1},{#2+\yb}) -- ({#1+0.95},{#2+0.45*\ya});
+  }
+  \foreach \ya in {-0.9,0,0.9} \fill[#3] ({#1-0.95},{#2+\ya}) circle (0.17);
+  \foreach \yb in {-1.35,-0.45,0.45,1.35} \fill[#3] ({#1},{#2+\yb}) circle (0.17);
+  \foreach \ya in {-0.9,0,0.9} \fill[#3] ({#1+0.95},{#2+0.45*\ya}) circle (0.17);
+}
+\begin{document}
+\begin{tikzpicture}
+\thumbcanvas
+% Model.
+\draw[card=violet] (1.2,3.8) rectangle (4.8,7.4);
+\mininet{3.0}{5.6}{violet}
+\node[text=ink] at (3.0,3.05) {\lbl{model}};
+% Harness with earlier revisions stacked behind.
+\draw[card=accent, opacity=0.35] (7.7,4.3) rectangle (11.3,7.9);
+\draw[card=accent, opacity=0.6] (7.45,4.05) rectangle (11.05,7.65);
+\draw[card=accent] (7.2,3.8) rectangle (10.8,7.4);
+\node[text=accent] at (9.0,6.45) {\icon[30]{tools}};
+\foreach \y/\w in {5.25/2.5,4.7/1.9,4.15/2.2} \fill[accent!55, rounded corners=2pt] (7.75,\y) rectangle ++(\w,0.22);
+\node[text=ink] at (9.0,3.05) {\lbl{harness}};
+% Co-evolution loop with learned revisions.
+\draw[arrow=accent] (4.95,7.0) to[bend left=38] (7.05,7.0);
+\draw[arrow=violet] (7.05,4.2) to[bend left=38] (4.95,4.2);
+\node[text=accent] at (6.0,8.55) {\icon[24]{pen}};
+\node[text=leaf] at (6.85,9.05) {\lbl{+}};
+\node[text=alert] at (5.15,9.05) {\lbl{$-$}};
+% Transfer to a new model.
+\draw[arrow=teal, dashed] (11.5,5.6) -- (12.55,5.6);
+\draw[card=teal] (12.7,4.3) rectangle (15.3,6.9);
+\begin{scope}[shift={(14.0,5.6)}, scale=0.62]
+  \mininet{0}{0}{teal}
+\end{scope}
+\node[text=ink] at (14.0,3.55) {\lbl{transfer}};
+\end{tikzpicture}
+\end{document}

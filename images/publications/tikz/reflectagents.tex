@@ -1,0 +1,37 @@
+% ReflectAgents: Teaching Multimodal Agents to Say No
+% A multimodal agent reflects on an image and an instruction, and declines when it should.
+\documentclass[tikz,border=0pt]{standalone}
+\input{thumbstyle}
+\begin{document}
+\begin{tikzpicture}
+\thumbcanvas
+% Visual input.
+\begin{scope}
+  \clip[rounded corners=10pt] (0.8,4.6) rectangle (4.8,8.4);
+  \fill[teal!12] (0.8,4.6) rectangle (4.8,8.4);
+  \fill[violet!60] (0.6,4.6) -- (2.2,7.1) -- (3.6,4.6) -- cycle;
+  \fill[teal!75] (2.3,4.6) -- (3.7,6.5) -- (5.0,4.9) -- (5.0,4.6) -- cycle;
+  \fill[sun] (3.85,7.45) circle (0.45);
+\end{scope}
+\draw[teal!70!black, line width=1.4pt, rounded corners=10pt] (0.8,4.6) rectangle (4.8,8.4);
+% Instruction.
+\node[rectangle callout, callout absolute pointer={(6.2,4.3)}, fill=mist, draw=ink!40, line width=1.4pt,
+  rounded corners=8pt, minimum width=4cm, minimum height=1.9cm] at (2.8,2.35) {};
+\fill[ink!40, rounded corners=2pt] (1.3,2.75) rectangle (4.3,2.98);
+\fill[ink!40, rounded corners=2pt] (1.3,2.15) rectangle (3.5,2.38);
+\fill[ink!40, rounded corners=2pt] (1.3,1.55) rectangle (3.9,1.78);
+% The agent and its reflection.
+\node[text=violet] at (7.8,6.05) {\icon[78]{robot}};
+\draw[ink!25, line width=1.4pt] (6.0,4.35) -- (9.6,4.35);
+\begin{scope}[shift={(7.8,2.65)}, yscale=-1]
+  \node[transform shape, text=violet, opacity=0.18] at (0,0) {\icon[78]{robot}};
+\end{scope}
+\fill[violet!45] (9.75,7.45) circle (0.12) (10.2,7.8) circle (0.17) (10.75,8.15) circle (0.22);
+% Saying no.
+\draw[arrow=ink!50] (9.8,5.6) -- (10.9,5.6);
+\node[regular polygon, regular polygon sides=8, shape border rotate=22.5, fill=alert, draw=alert!70!black,
+  line width=2pt, minimum size=3.7cm] at (13.2,5.6) {};
+\node[regular polygon, regular polygon sides=8, shape border rotate=22.5, draw=white, line width=2pt,
+  minimum size=3.3cm, text=white] at (13.2,5.6) {\fontsize{38}{38}\selectfont\bfseries NO};
+\end{tikzpicture}
+\end{document}
