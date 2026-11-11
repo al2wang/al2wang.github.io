@@ -37,9 +37,9 @@
       "selected": true
     },
     {
-      "title": "AIChipBench: State-Aware Evaluation of Coding Agents for AI Accelerators",
+      "title": "AIChipBench: Benchmarking LLM Agents for Automated AI Accelerator Design",
       "thumbnail": "images/publications/aichipbench.webp",
-      "authors": ["Guangyuan Wang", "Minchen Luo", "Chengran Li", "Jichen Feng", "Mengdi Wang†", "Yifan Zhang†"],
+      "authors": ["Guangyuan Wang", "Chengran Li", "Minchen Luo", "Jichen Feng", "Mengdi Wang†", "Yifan Zhang†"],
       "venue": "Preprint. Under review, ICLR 2027",
       "url": "https://openreview.net/forum?id=Qcpj94Y3zm",
       "selected": true
