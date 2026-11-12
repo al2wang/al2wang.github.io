@@ -2,20 +2,6 @@
 @font-face {
   font-family: "Lato";
   font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url("assets/fonts/lato-300-latin.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Lato";
-  font-style: italic;
-  font-weight: 300;
-  font-display: swap;
-  src: url("assets/fonts/lato-300-italic-latin.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Lato";
-  font-style: normal;
   font-weight: 400;
   font-display: swap;
   src: url("assets/fonts/lato-400-latin.woff2") format("woff2");
@@ -88,7 +74,7 @@ body {
   color: var(--text);
   font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.6;
   overflow-wrap: break-word;
 }
@@ -106,9 +92,9 @@ button { font: inherit; cursor: pointer; }
 strong { font-weight: 700; }
 p { margin: 0 0 1rem; }
 h1, h2, h3 { line-height: 1.25; }
-h1 { margin: 0 0 .55rem; font-size: 2.5rem; font-weight: 300; }
+h1 { margin: 0 0 .55rem; font-size: 2.5rem; font-weight: 400; }
 h1 strong { font-weight: 700; }
-h2 { margin: 0 0 .6rem; font-size: 1.4rem; font-weight: 300; }
+h2 { margin: 0 0 .6rem; font-size: 1.4rem; font-weight: 400; }
 h3 { margin: 0; font-size: 1rem; font-weight: 700; }
 svg { width: 21px; height: 21px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .container { width: min(100% - 3rem, 820px); margin-inline: auto; }

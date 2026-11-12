@@ -61,8 +61,7 @@ Push to `main` to deploy through the existing GitHub Pages configuration.
 
 The layout follows Jonas Hübotter's al-folio site, with Lato typography.
 The al-folio MIT license is retained in
-`assets/licenses/al-folio.txt`. Lato (light, regular, and bold, plus light and
-regular italics) is served locally from `assets/fonts/lato-*-latin.woff2`; its SIL Open Font
+`assets/licenses/al-folio.txt`. Lato (regular, bold, and regular italic) is served locally from `assets/fonts/lato-*-latin.woff2`; its SIL Open Font
 License is in `assets/fonts/OFL.txt`. The repository's existing MIT license is
 preserved in `LICENSE`.
 
