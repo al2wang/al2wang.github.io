@@ -83,6 +83,9 @@ body {
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; text-underline-offset: .16em; }
 .biography p a, .news-list dd a { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .16em; }
+.inline-logo { display: inline-block; width: auto; height: 1.15em; margin-right: .22em; vertical-align: -.2em; }
+:root[data-theme="dark"] .mila-logo { filter: brightness(2.4) saturate(.85); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .mila-logo { filter: brightness(2.4) saturate(.85); } }
 a:focus-visible, button:focus-visible, summary:focus-visible {
   outline: 2px solid var(--focus);
   outline-offset: 5px;
