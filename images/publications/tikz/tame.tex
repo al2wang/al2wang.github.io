@@ -1,42 +1,53 @@
 % TAME: Transfer-Aware Model-Harness Co-Evolution through Learned Harness Revisions
-% A model and its harness co-evolve through learned revisions; the revised harness transfers to a new model.
-\documentclass[tikz,border=0pt]{standalone}
-\input{thumbstyle}
-\newcommand{\mininet}[3]{% center x, center y, color
-  \foreach \ya in {-0.9,0,0.9} \foreach \yb in {-1.35,-0.45,0.45,1.35} {
-    \draw[#3!45, line width=0.9pt] ({#1-0.95},{#2+\ya}) -- ({#1},{#2+\yb});
-    \draw[#3!45, line width=0.9pt] ({#1},{#2+\yb}) -- ({#1+0.95},{#2+0.45*\ya});
-  }
-  \foreach \ya in {-0.9,0,0.9} \fill[#3] ({#1-0.95},{#2+\ya}) circle (0.17);
-  \foreach \yb in {-1.35,-0.45,0.45,1.35} \fill[#3] ({#1},{#2+\yb}) circle (0.17);
-  \foreach \ya in {-0.9,0,0.9} \fill[#3] ({#1+0.95},{#2+0.45*\ya}) circle (0.17);
-}
+% Figure 2 (Overview of TAME) of the paper, re-laid out into three columns so it fills a 16:10
+% thumbnail. Adapted from the paper source (tame_iclr2027.tex): same nodes, labels, arrow styles,
+% colors and fonts.
+\documentclass[tikz,border=1pt]{standalone}
+\usepackage{times}
+\usepackage{amsmath,amssymb}
+\usetikzlibrary{arrows.meta,calc,positioning}
+\definecolor{tameteal}{HTML}{178A83}
+\definecolor{tametealfill}{HTML}{E2F5F2}
+\definecolor{tameorange}{HTML}{D47A1F}
+\definecolor{tameorangefill}{HTML}{FFF0DD}
+\definecolor{tamepurple}{HTML}{7556A5}
+\definecolor{tamepurplefill}{HTML}{F0E9FA}
+\definecolor{tamegray}{HTML}{59636E}
+\definecolor{tamegrayfill}{HTML}{F2F4F6}
+\newcommand{\MetaTrain}{\mathcal D_{\mathrm{meta}}}
+\newcommand{\Tscore}{\mathcal T}
+\newcommand{\Escore}{\mathcal H_{\mathrm{score}}}
+\tikzset{flow/.style={-{Latex[length=1.8mm]},thick,draw=tamegray}}
 \begin{document}
-\begin{tikzpicture}
-\thumbcanvas
-% Model.
-\draw[card=violet] (1.2,3.8) rectangle (4.8,7.4);
-\mininet{3.0}{5.6}{violet}
-\node[text=ink] at (3.0,3.05) {\lbl{model}};
-% Harness with earlier revisions stacked behind.
-\draw[card=accent, opacity=0.35] (7.7,4.3) rectangle (11.3,7.9);
-\draw[card=accent, opacity=0.6] (7.45,4.05) rectangle (11.05,7.65);
-\draw[card=accent] (7.2,3.8) rectangle (10.8,7.4);
-\node[text=accent] at (9.0,6.45) {\icon[30]{tools}};
-\foreach \y/\w in {5.25/2.5,4.7/1.9,4.15/2.2} \fill[accent!55, rounded corners=2pt] (7.75,\y) rectangle ++(\w,0.22);
-\node[text=ink] at (9.0,3.05) {\lbl{harness}};
-% Co-evolution loop with learned revisions.
-\draw[arrow=accent] (4.95,7.0) to[bend left=38] (7.05,7.0);
-\draw[arrow=violet] (7.05,4.2) to[bend left=38] (4.95,4.2);
-\node[text=accent] at (6.0,8.55) {\icon[24]{pen}};
-\node[text=leaf] at (6.85,9.05) {\lbl{+}};
-\node[text=alert] at (5.15,9.05) {\lbl{$-$}};
-% Transfer to a new model.
-\draw[arrow=teal, dashed] (11.5,5.6) -- (12.55,5.6);
-\draw[card=teal] (12.7,4.3) rectangle (15.3,6.9);
-\begin{scope}[shift={(14.0,5.6)}, scale=0.62]
-  \mininet{0}{0}{teal}
-\end{scope}
-\node[text=ink] at (14.0,3.55) {\lbl{transfer}};
+\begin{tikzpicture}[
+  stage/.style={draw=tamegray,fill=tamegrayfill,rounded corners=2pt,thick,align=center,
+    inner sep=3pt,font=\footnotesize,minimum width=2.45cm,minimum height=0.95cm},
+  sub/.style={font=\scriptsize},
+  update/.style={-{Latex[length=1.8mm]},thick,draw=tamepurple,densely dashed}]
+% Row 1: revision context -> Feedback-Agent -> harness.
+\node[stage] (ctx) {Revision context\\{\scriptsize$A_g,\ \tau_g,\ \mathcal E_g,\ \mathcal U$}};
+\node[stage,draw=tamepurple,fill=tamepurplefill,right=1.0cm of ctx] (fa) {Feedback-Agent $\mu_\phi$\\{\scriptsize samples a patch}};
+\node[stage,draw=tameorange,fill=tameorangefill,right=1.0cm of fa] (h) {Harness $A_{g+1}$\\{\scriptsize valid patch, else $A_g$}};
+% Right column going down: task model -> common evaluation.
+\node[stage,draw=tameteal,fill=tametealfill,below=0.9cm of h] (tm) {Task model $\pi_\theta$\\{\scriptsize GRPO, budget $B_g$}};
+\node[stage,below=0.9cm of tm] (ev) {Common evaluation\\{\scriptsize scoring harnesses $\Escore$}};
+% Middle column going up: stage reward -> token-level PPO -> Feedback-Agent.
+\node[stage] (rw) at (fa |- ev)
+  {Stage reward $r_g^{\mathrm{out}}$\\{\scriptsize$\Tscore_{\MetaTrain}^{\mathbf w}(\theta_{g+1})-\Tscore_{\MetaTrain}^{\mathbf w}(\theta_g)$}};
+\node[stage,draw=tamepurple,fill=white] (ppo) at (fa |- tm) {Token-level PPO\\{\scriptsize after each batch}};
+\draw[flow] (ctx) -- (fa);
+\draw[flow] (fa) -- (h);
+\draw[flow] (h) -- (tm);
+\draw[flow] (tm) -- (ev);
+\draw[flow] (ev) -- (rw);
+\draw[flow] (rw) -- node[left,sub,align=right] {rewards from\\all $K$ stages} (ppo);
+\draw[update] (ppo) -- node[right,sub] {update $\phi$} (fa);
+% Next stage: loop from the task model back to the revision context over the top.
+\draw[flow] (tm.east) -- ++(0.3,0) |- ($(ctx.north)+(0,0.42)$) node[pos=0.75,above,sub,align=center]
+  {next stage: $\theta_{g+1}$ and $A_{g+1}$ carry over; traces and feedback refresh} -- (ctx.north);
+% Legend.
+\node[sub,align=left,anchor=south west] at (ctx.west |- ev.south)
+  {\tikz[baseline=-0.6ex]\draw[flow] (0,0) -- (0.4,0);\ stage execution\\[2pt]
+   \tikz[baseline=-0.6ex]\draw[update] (0,0) -- (0.4,0);\ outer training only};
 \end{tikzpicture}
 \end{document}
