@@ -176,6 +176,9 @@ a.publication-thumb:hover { border-color: var(--accent); box-shadow: 0 4px 14px 
 .publication-authors .self { font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
 .publication-authors sup, .publication-note sup { font-size: .75em; line-height: 0; }
 .publication-venue { font-style: italic; color: var(--muted); }
+.publication-links { display: flex; flex-wrap: wrap; gap: .35rem; margin: .35rem 0 0; padding: 0; list-style: none; }
+.publication-links a { display: inline-block; padding: .02rem .5rem; border: 1px solid var(--accent); border-radius: 4px; font-size: .78rem; line-height: 1.45; }
+.publication-links a:hover { background: var(--accent); color: var(--background); text-decoration: none; }
 .publication-note { color: var(--muted); font-size: .8rem; margin: .9rem 0 0; }
 .talks-list > div { margin-bottom: 1.5rem; }
 .talks-list p { margin: .1rem 0 .45rem; color: var(--muted); }

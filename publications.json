@@ -59,6 +59,7 @@
       "authors": ["Guangyuan Wang", "Wei Deng", "Langlin Wan", "Yinling Zhang", "Shilong Liu"],
       "venue": "Preprint. Under review, ICML 2027",
       "url": "https://sai-foundation.github.io/s-code-docs/docs/privacy-security-comparison/",
+      "links": [{"label": "Webpage", "url": "https://sai-foundation.github.io/s-code-docs/docs/privacy-security-comparison/"}, {"label": "Code", "url": "https://github.com/sai-foundation/s-code"}],
       "selected": true
     },
     {
@@ -67,6 +68,7 @@
       "authors": ["Langlin Wan", "Zhixuan Liang", "Guangyuan Wang", "Shilong Liu"],
       "venue": "Preprint. Under review, FSE 2026",
       "url": "https://www.preprints.org/manuscript/202610.1889",
+      "links": [{"label": "Paper", "url": "https://www.preprints.org/manuscript/202610.1889"}, {"label": "Code", "url": "https://github.com/WanLanglin/fit-not-format-edit-harness"}],
       "selected": true
     },
     {
@@ -91,6 +93,7 @@
       "authors": ["Elliot Paquette", "Noah Marshall", "Lucas Benigni", "Guangyuan Wang", "Atish Agarwala", "Courtney Paquette"],
       "venue": "NeurIPS 2026",
       "url": "https://arxiv.org/abs/2605.09552",
+      "links": [{"label": "Paper", "url": "https://arxiv.org/pdf/2605.09552"}, {"label": "Code", "url": "https://github.com/mlexpos/phases-of-muon"}, {"label": "Webpage", "url": "https://mlexpos.github.io/phases-of-muon/"}],
       "selected": true
     },
     {

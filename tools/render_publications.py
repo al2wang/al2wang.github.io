@@ -57,6 +57,18 @@ def render_thumbnail(publication):
     return '<div class="{}" aria-hidden="true">{}</div>'.format(classes, inner)
 
 
+def render_links(publication):
+    """Tag buttons (Paper, Code, Webpage, ...). Without explicit "links", the main URL becomes a Paper tag."""
+    links = publication.get("links")
+    if links is None:
+        links = [{"label": "Paper", "url": publication["url"]}] if publication.get("url") else []
+    if not links:
+        return ""
+    tags = "".join('<li><a href="{}">{}</a></li>'.format(link_url(link["url"]), escape(link["label"]))
+                   for link in links)
+    return '<ul class="publication-links" aria-label="Links">{}</ul>'.format(tags)
+
+
 def render_publication(publication):
     title = escape(publication["title"])
     if publication.get("url"):
@@ -72,11 +84,11 @@ def render_publication(publication):
     if publication.get("authors"):
         lines.append('    <p class="publication-authors">{}</p>'.format(
             ", ".join(render_author(author) for author in publication["authors"])))
-    lines.extend([
-        '    <p class="publication-venue">{}</p>'.format(escape(publication["venue"])),
-        "  </div>",
-        "</li>",
-    ])
+    lines.append('    <p class="publication-venue">{}</p>'.format(escape(publication["venue"])))
+    links = render_links(publication)
+    if links:
+        lines.append("    " + links)
+    lines.extend(["  </div>", "</li>"])
     return indent("\n".join(lines), " " * 8)
 
 
