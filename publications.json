@@ -4,21 +4,21 @@
       "title": "Can Language Models Learn Forever? Stationarity and Plasticity Under Continual Pretraining",
       "thumbnail": "images/publications/continual-pretraining.webp",
       "authors": [],
-      "venue": "In preparation. To be submitted to ICML 2027",
+      "venue": "Under review, ICML 2027",
       "selected": true
     },
     {
       "title": "Inference on Ceilings: Chandelier Debiasing for Optimal Policy Value with Continuous Treatments under Preference Data",
       "thumbnail": "images/publications/chandelier-debiasing.webp",
       "authors": [],
-      "venue": "In preparation. To be submitted to ICML 2027",
+      "venue": "Under review, ICML 2027",
       "selected": true
     },
     {
       "title": "ReflectAgents: Teaching Multimodal Agents to Say No",
       "thumbnail": "images/publications/reflectagents.webp",
       "authors": [],
-      "venue": "In preparation. To be submitted to CVPR 2027",
+      "venue": "Preprint. Under review, CVPR 2027",
       "selected": true
     },
     {
