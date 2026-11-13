@@ -1,10 +1,15 @@
 % Solving Reflected Diffusion Models: A Physics-Informed Approach
 % A diffusion path reflects off the domain boundary; a physics-informed network fits the density over collocation points.
-\documentclass[tikz,border=0pt]{standalone}
+% Below the drawing: the reflected SDE, the Fokker-Planck equation with its zero-flux (Neumann) boundary
+% condition, and the PINN training loss, as stated in the paper (Sections 2-3).
+\documentclass[border=0pt]{standalone}
+\usepackage{tikz}
 \input{thumbstyle}
+\newsavebox{\drawing}
 \begin{document}
+\sbox{\drawing}{%
 \begin{tikzpicture}
-\thumbcanvas
+\useasboundingbox (0.7,0.3) rectangle (14.9,9.7);
 % Domain with a density inside.
 \shade[inner color=accent!50, outer color=teal!12] (5.4,5.0) circle (4.1);
 \foreach \x in {2.2,3.0,...,8.7} \foreach \y in {1.8,2.6,...,8.3} {
@@ -30,5 +35,26 @@
 \foreach \yb in {3.6,4.6,5.6,6.6} \fill[violet] (13.0,\yb) circle (0.2);
 \fill[accent] (14.4,5.1) circle (0.24);
 \node[text=ink] at (13.0,2.35) {\lbl{$p_\theta(x,t)$}};
+\end{tikzpicture}}%
+\begin{tikzpicture}
+\thumbcanvas
+% The drawing, scaled uniformly (line widths included) into the top of the canvas.
+\node[inner sep=0pt] at (8,6.85) {\scalebox{0.64}{\usebox{\drawing}}};
+% Key equations.
+\fill[mist, rounded corners=8pt] (0.35,0.3) rectangle (15.65,3.55);
+\draw[violet!70, line width=1.2pt, rounded corners=8pt] (0.35,0.3) rectangle (15.65,3.55);
+\node[text=ink, font=\fontsize{12}{14}\selectfont] at (8,1.925) {%
+  \renewcommand{\arraystretch}{1.55}%
+  \begin{tabular}{@{}r@{\hspace{0.9em}}l@{}}
+  \textbf{Reflected SDE} &
+  $\mathrm{d}\mathbf{X}_t=\mathbf{f}(t,\mathbf{X}_t)\,\mathrm{d}t+g(t)\,\mathrm{d}\mathbf{B}_t+\mathrm{d}\mathbf{L}_t$\\
+  \textbf{Fokker--Planck} &
+  $\partial_t u=\nabla\!\cdot\!\big({-u\mathbf{f}}+\tfrac{g^2}{2}\nabla u\big),\quad
+   \big(u\mathbf{f}-\tfrac{g^2}{2}\nabla u\big)\!\cdot\mathbf{n}=0\ \ \text{on }\partial\Omega$\\
+  \textbf{PINN loss} &
+  $L(\theta)=\frac{1}{T}\!\int_0^T\!\!\int_\Omega |R_{\mathrm{PDE}}|^2\,p_t
+   +\frac{1}{T}\!\int_0^T\!\!\int_{\partial\Omega} |R_{bc}|^2
+   +\lambda\,\mathrm{KL}\big(p_{\mathrm{data}},u_\theta(\cdot,0)\big)$
+  \end{tabular}};
 \end{tikzpicture}
 \end{document}
