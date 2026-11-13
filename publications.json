@@ -95,7 +95,7 @@
     {
       "title": "High-Dimensional Isotropic Scaling Dynamics of Muon and SGD",
       "thumbnail": "images/publications/isotropic-scaling-muon.webp",
-      "authors": ["Guangyuan Wang", "Elliot Paquette", "Atish Agarwala"],
+      "authors": ["Guangyuan Wang", "Elliot Paquette†", "Atish Agarwala†"],
       "venue": "Optimization for Machine Learning Workshop, NeurIPS 2025",
       "url": "https://openreview.net/pdf?id=6sh0yBvLr4",
       "selected": true
