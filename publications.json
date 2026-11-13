@@ -85,6 +85,7 @@
       "authors": ["Guangyuan Wang", "Mads Toftrup", "Sebastian Loeschcke", "Yixuan Wang", "Anima Anandkumar"],
       "venue": "Preprint, 2026. Under review at JMLR",
       "url": "https://www.alphaxiv.org/abs/2608.29448",
+      "links": [{"label": "Paper", "url": "https://www.alphaxiv.org/abs/2608.29448"}, {"label": "Code", "url": "https://github.com/al2wang/ss_esoap_nips/blob/main/ss_esoap.py"}],
       "selected": true
     },
     {
@@ -93,7 +94,7 @@
       "authors": ["Elliot Paquette", "Noah Marshall", "Lucas Benigni", "Guangyuan Wang", "Atish Agarwala", "Courtney Paquette"],
       "venue": "NeurIPS 2026",
       "url": "https://arxiv.org/abs/2605.09552",
-      "links": [{"label": "Paper", "url": "https://arxiv.org/pdf/2605.09552"}, {"label": "Code", "url": "https://github.com/mlexpos/phases-of-muon"}, {"label": "Webpage", "url": "https://mlexpos.github.io/phases-of-muon/"}],
+      "links": [{"label": "Paper", "url": "https://arxiv.org/pdf/2605.09552"}, {"label": "Code", "url": "https://github.com/al2wang/phases-of-muon"}, {"label": "Webpage", "url": "https://mlexpos.github.io/phases-of-muon/"}],
       "selected": true
     },
     {
@@ -102,6 +103,7 @@
       "authors": ["Guangyuan Wang", "Elliot Paquette†", "Atish Agarwala†"],
       "venue": "Optimization for Machine Learning Workshop, NeurIPS 2025",
       "url": "https://openreview.net/pdf?id=6sh0yBvLr4",
+      "links": [{"label": "Paper", "url": "https://openreview.net/pdf?id=6sh0yBvLr4"}, {"label": "Code", "url": "https://github.com/al2wang/muon"}, {"label": "Webpage", "url": "https://neurips.cc/virtual/2025/124372"}],
       "selected": true
     },
     {
@@ -110,6 +112,7 @@
       "authors": ["Haque Ishfaq*", "Guangyuan Wang*", "Sami Nur Islam", "Doina Precup"],
       "venue": "ICLR 2025",
       "url": "https://openreview.net/pdf?id=FvQsk3la17",
+      "links": [{"label": "Paper", "url": "https://openreview.net/pdf?id=FvQsk3la17"}, {"label": "Code", "url": "https://github.com/hmishfaq/LSAC"}],
       "selected": true
     },
     {
