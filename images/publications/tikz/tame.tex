@@ -34,20 +34,20 @@
 % Middle column going up: stage reward -> token-level PPO -> Feedback-Agent.
 \node[stage] (rw) at (fa |- ev)
   {Stage reward $r_g^{\mathrm{out}}$\\{\scriptsize$\Tscore_{\MetaTrain}^{\mathbf w}(\theta_{g+1})-\Tscore_{\MetaTrain}^{\mathbf w}(\theta_g)$}};
-\node[stage,draw=tamepurple,fill=white] (ppo) at (fa |- tm) {Token-level PPO\\{\scriptsize after each batch}};
+\node[stage,draw=tamepurple,fill=white] (ppo) at (ctx |- tm) {Token-level PPO\\{\scriptsize after each batch}};
 \draw[flow] (ctx) -- (fa);
 \draw[flow] (fa) -- (h);
 \draw[flow] (h) -- (tm);
 \draw[flow] (tm) -- (ev);
 \draw[flow] (ev) -- (rw);
-\draw[flow] (rw) -- node[left,sub,align=right] {rewards from\\all $K$ stages} (ppo);
-\draw[update] (ppo) -- node[right,sub] {update $\phi$} (fa);
+\draw[flow] (rw.west) -| node[pos=0.72,right,sub,align=left] {rewards from\\all $K$ stages} (ppo.south);
+\draw[update] (ppo.east) -| node[pos=0.75,right,sub] {update $\phi$} (fa.south);
 % Next stage: loop from the task model back to the revision context over the top.
 \draw[flow] (tm.east) -- ++(0.3,0) |- ($(ctx.north)+(0,0.42)$) node[pos=0.75,above,sub,align=center]
   {next stage: $\theta_{g+1}$ and $A_{g+1}$ carry over; traces and feedback refresh} -- (ctx.north);
 % Legend.
-\node[sub,align=left,anchor=south west] at (ctx.west |- ev.south)
-  {\tikz[baseline=-0.6ex]\draw[flow] (0,0) -- (0.4,0);\ stage execution\\[2pt]
+\node[sub,anchor=north west] at ($(ctx.west |- rw.south)+(0,-0.3)$)
+  {\tikz[baseline=-0.6ex]\draw[flow] (0,0) -- (0.4,0);\ stage execution\qquad
    \tikz[baseline=-0.6ex]\draw[update] (0,0) -- (0.4,0);\ outer training only};
 \end{tikzpicture}
 \end{document}
