@@ -11,8 +11,9 @@ from urllib.parse import urlsplit
 
 
 ROOT = Path(__file__).resolve().parent.parent
-START = "        <!-- PUBLICATIONS:START -->"
-END = "        <!-- PUBLICATIONS:END -->"
+START = "      <!-- PUBLICATIONS:START -->"
+END = "      <!-- PUBLICATIONS:END -->"
+MORE_LABEL = "More papers under review"
 SELF = "Guangyuan Wang"
 # Trailing author marks: * equal contribution, † equal advising.
 AUTHOR_MARKS = "*†"
@@ -92,13 +93,34 @@ def render_publication(publication):
     return indent("\n".join(lines), " " * 8)
 
 
+def has_links(publication):
+    return bool(publication.get("url") or publication.get("links"))
+
+
+def render_section(selected):
+    """Papers with a link are listed up front; the rest wait behind a toggle, like the older news."""
+    shown = [publication for publication in selected if has_links(publication)]
+    held = [publication for publication in selected if not has_links(publication)]
+    parts = ['      <ol class="publication-list">',
+             *[render_publication(publication) for publication in shown],
+             "      </ol>"]
+    if held:
+        parts += ['      <details class="more-publications">',
+                  "        <summary>{}</summary>".format(MORE_LABEL),
+                  '        <ol class="publication-list">',
+                  *[indent(render_publication(publication), "  ") for publication in held],
+                  "        </ol>",
+                  "      </details>"]
+    return "\n".join(parts)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--check", action="store_true", help="Fail if the homepage needs regeneration.")
     args = parser.parse_args()
     publications = json.loads((ROOT / "publications.json").read_text(encoding="utf-8"))["publications"]
     selected = [publication for publication in publications if publication.get("selected")]
-    content = "\n".join(render_publication(publication) for publication in selected)
+    content = render_section(selected)
     homepage = ROOT / "index.html"
     original = homepage.read_text(encoding="utf-8")
     if START not in original and END not in original:
