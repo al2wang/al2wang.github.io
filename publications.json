@@ -56,7 +56,7 @@
     {
       "title": "Safe, Self-Evolving, and Swift Coding Agent",
       "thumbnail": "images/publications/s-code.webp",
-      "authors": [],
+      "authors": ["Guangyuan Wang", "Wei Deng", "Langlin Wan", "Yinling Zhang", "Shilong Liu"],
       "venue": "Preprint. Under review, ICML 2027",
       "url": "https://sai-foundation.github.io/s-code-docs/docs/privacy-security-comparison/",
       "selected": true
