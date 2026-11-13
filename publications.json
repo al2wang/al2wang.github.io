@@ -30,14 +30,6 @@
       "selected": true
     },
     {
-      "title": "TAME: Transfer-Aware Model-Harness Co-Evolution through Learned Harness Revisions",
-      "thumbnail": "images/publications/tame.webp",
-      "authors": ["Guangyuan Wang", "Yifan Zhang", "Shilong Liu"],
-      "venue": "Preprint. Under review, ICLR 2027",
-      "url": "https://openreview.net/pdf?id=IXnpSW8g3v",
-      "selected": true
-    },
-    {
       "title": "AIChipBench: Benchmarking LLM Agents for Automated AI Accelerator Design",
       "thumbnail": "images/publications/aichipbench.webp",
       "authors": ["Guangyuan Wang", "Chengran Li", "Minchen Luo", "Jichen Feng", "Mengdi Wang†", "Yifan Zhang†"],
@@ -46,11 +38,11 @@
       "selected": true
     },
     {
-      "title": "Solving Reflected Diffusion Models: A Physics-Informed Approach",
-      "thumbnail": "images/publications/reflected-diffusion.webp",
-      "authors": ["Liyuan Xu*", "Guangyuan Wang*", "Junwei Lu"],
-      "venue": "Preprint, 2026",
-      "url": "https://openreview.net/pdf?id=XGuljQzFO9",
+      "title": "TAME: Transfer-Aware Model-Harness Co-Evolution through Learned Harness Revisions",
+      "thumbnail": "images/publications/tame.webp",
+      "authors": ["Guangyuan Wang", "Yifan Zhang", "Shilong Liu"],
+      "venue": "Preprint. Under review, ICLR 2027",
+      "url": "https://openreview.net/pdf?id=IXnpSW8g3v",
       "selected": true
     },
     {
@@ -86,6 +78,14 @@
       "venue": "Preprint, 2026. Under review at JMLR",
       "url": "https://www.alphaxiv.org/abs/2608.29448",
       "links": [{"label": "Paper", "url": "https://www.alphaxiv.org/abs/2608.29448"}, {"label": "Code", "url": "https://github.com/al2wang/ss_esoap_nips/blob/main/ss_esoap.py"}],
+      "selected": true
+    },
+    {
+      "title": "Solving Reflected Diffusion Models: A Physics-Informed Approach",
+      "thumbnail": "images/publications/reflected-diffusion.webp",
+      "authors": ["Liyuan Xu*", "Guangyuan Wang*", "Junwei Lu"],
+      "venue": "Preprint, 2026",
+      "url": "https://openreview.net/pdf?id=XGuljQzFO9",
       "selected": true
     },
     {
