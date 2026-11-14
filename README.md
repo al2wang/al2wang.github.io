@@ -59,10 +59,11 @@ Push to `main` to deploy through the existing GitHub Pages configuration.
 
 ## Credits
 
-The layout follows Jonas Hübotter's al-folio site, with Lato typography.
+The layout follows Jonas Hübotter's al-folio site, with Palatino typography.
 The al-folio MIT license is retained in
-`assets/licenses/al-folio.txt`. Lato (regular, bold, and regular italic) is served locally from `assets/fonts/lato-*-latin.woff2`; its SIL Open Font
-License is in `assets/fonts/OFL.txt`. The repository's existing MIT license is
+`assets/licenses/al-folio.txt`. Text uses Palatino Linotype where installed and otherwise falls back to TeX Gyre Pagella,
+served locally from `assets/fonts/pagella-*-latin.woff2` (Latin subsets); its GUST Font License is in
+`assets/fonts/GUST-FONT-LICENSE.txt`. The repository's existing MIT license is
 preserved in `LICENSE`.
 
 ## Placeholder portrait

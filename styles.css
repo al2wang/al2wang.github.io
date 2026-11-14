@@ -1,24 +1,32 @@
 /* Academic layout adapted from al-folio; see assets/licenses/al-folio.txt. */
+/* Palatino Linotype where installed; otherwise TeX Gyre Pagella, a free Palatino clone (GUST Font License). */
 @font-face {
-  font-family: "Lato";
+  font-family: "Pagella Web";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("assets/fonts/lato-400-latin.woff2") format("woff2");
+  src: url("assets/fonts/pagella-regular-latin.woff2") format("woff2");
 }
 @font-face {
-  font-family: "Lato";
+  font-family: "Pagella Web";
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url("assets/fonts/lato-400-italic-latin.woff2") format("woff2");
+  src: url("assets/fonts/pagella-italic-latin.woff2") format("woff2");
 }
 @font-face {
-  font-family: "Lato";
+  font-family: "Pagella Web";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("assets/fonts/lato-700-latin.woff2") format("woff2");
+  src: url("assets/fonts/pagella-bold-latin.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pagella Web";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/pagella-bolditalic-latin.woff2") format("woff2");
 }
 
 :root {
@@ -72,7 +80,7 @@ body {
   flex-direction: column;
   background: var(--background);
   color: var(--text);
-  font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Palatino Linotype", Palatino, "Book Antiqua", "TeX Gyre Pagella", "Pagella Web", serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.45;
@@ -172,7 +180,7 @@ a.publication-thumb:hover { border-color: var(--accent); box-shadow: 0 4px 14px 
   background-image: radial-gradient(var(--thumb-dot) 1px, transparent 1.4px), linear-gradient(135deg, var(--thumb-tint), var(--background));
   background-size: 14px 14px, 100% 100%;
   font-size: 1.05rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.2;
   letter-spacing: .01em;
   text-align: center;
