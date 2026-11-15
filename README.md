@@ -63,7 +63,8 @@ The layout follows Jonas Hübotter's al-folio site, with Palatino typography.
 The al-folio MIT license is retained in
 `assets/licenses/al-folio.txt`. Text uses Palatino Linotype where installed and otherwise falls back to TeX Gyre Pagella,
 served locally from `assets/fonts/pagella-*-latin.woff2` (Latin subsets); its GUST Font License is in
-`assets/fonts/GUST-FONT-LICENSE.txt`. The repository's existing MIT license is
+`assets/fonts/GUST-FONT-LICENSE.txt`. The Chinese name uses a three-character subset of Noto Serif SC
+(`assets/fonts/noto-serif-sc-name.woff2`, SIL Open Font License in `assets/fonts/NOTO-SERIF-SC-OFL.txt`). The repository's existing MIT license is
 preserved in `LICENSE`.
 
 ## Placeholder portrait
