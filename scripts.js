@@ -32,6 +32,16 @@
     systemTheme.addEventListener('change', updateThemeButton);
   }
 
+  document.querySelectorAll('.tldr-toggle').forEach(function (button) {
+    const summary = document.getElementById(button.getAttribute('aria-controls'));
+    if (!summary) return;
+    button.addEventListener('click', function () {
+      const open = button.getAttribute('aria-expanded') !== 'true';
+      button.setAttribute('aria-expanded', String(open));
+      summary.hidden = !open;
+    });
+  });
+
   const year = document.getElementById('copyright-year');
   if (year) year.textContent = String(new Date().getFullYear());
 }());

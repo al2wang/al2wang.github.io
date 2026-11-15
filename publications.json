@@ -5,6 +5,7 @@
       "thumbnail": "images/publications/continual-pretraining.webp",
       "authors": ["Guangyuan Wang", "Guanning Zeng", "Yuda Song", "Andrea Zanette"],
       "venue": "Preprint, in preparation",
+      "tldr": "We study when a long-trained language model is still worth continuing on new data, separating how well it holds onto its source corpus (stationarity) from how readily it can still learn (plasticity), and find that weight decay decides whether age slows learning down or speeds it up.",
       "selected": true
     },
     {
@@ -12,6 +13,7 @@
       "thumbnail": "images/publications/chandelier-debiasing.webp",
       "authors": ["Guangyuan Wang", "Junwei Lu"],
       "venue": "Preprint, in preparation",
+      "tldr": "We develop pointwise uncertainty quantification for rewards learned from preference comparisons under a Bradley–Terry model, combining a reward estimator with a Green-function debiasing correction and proving rates and asymptotic normality for the resulting estimator.",
       "selected": true
     },
     {
@@ -19,6 +21,7 @@
       "thumbnail": "images/publications/reflectagents.webp",
       "authors": ["Bo Gao", "Guangyuan Wang", "Guanning Zeng", "Andrea Zanette"],
       "venue": "Preprint, in preparation",
+      "tldr": "We study when reflection is worth its cost for tool-using vision–language agents, defining its value against a matched-compute continuation and using that value to train agents that reflect only when it helps.",
       "selected": true
     },
     {
@@ -26,6 +29,7 @@
       "thumbnail": "images/publications/adaptive-index-reuse.webp",
       "authors": ["Guangyuan Wang", "Yifan Zhang", "Shilong Liu"],
       "venue": "Preprint. Under review, NAACL 2027",
+      "tldr": "We introduce AIR (Adaptive Index Reuse), which uses reinforcement learning to decide when a long-horizon language agent should refresh its sparse-attention selections, improving both success and speed at the same compute budget on coding, terminal and tool-use benchmarks.",
       "url": "https://arxiv.org/abs/2611.01429",
       "selected": true
     },
@@ -34,6 +38,7 @@
       "thumbnail": "images/publications/aichipbench.webp",
       "authors": ["Guangyuan Wang", "Chengran Li", "Minchen Luo", "Jichen Feng", "Mengdi Wang†", "Yifan Zhang†"],
       "venue": "Preprint. Under review, ICLR 2027",
+      "tldr": "We introduce AIChipBench, a benchmark that tests whether LLM coding agents can turn model specifications into working AI accelerator designs, with independent held-out checks that catch failures public tests miss.",
       "url": "https://openreview.net/pdf?id=Qcpj94Y3zm",
       "selected": true
     },
@@ -42,6 +47,7 @@
       "thumbnail": "images/publications/tame.webp",
       "authors": ["Guangyuan Wang", "Yifan Zhang", "Shilong Liu"],
       "venue": "Preprint. Under review, ICLR 2027",
+      "tldr": "We show that the harness that helps an agent most during training does not always leave the strongest model, and introduce TAME, which trains a feedback agent with reinforcement learning to revise the training harness for gains that transfer to independent deployment harnesses.",
       "url": "https://openreview.net/pdf?id=IXnpSW8g3v",
       "selected": true
     },
@@ -50,6 +56,7 @@
       "thumbnail": "images/publications/s-code.webp",
       "authors": ["Guangyuan Wang", "Wei Deng", "Langlin Wan", "Yinling Zhang", "Shilong Liu"],
       "venue": "Preprint. Under review, ICML 2027",
+      "tldr": "We present S-Code, an open-source coding harness whose self-evolution layer turns observed repairs into short, auditable lessons that later sessions and other agents can safely reuse, without changing model weights or agent code.",
       "url": "https://sai-foundation.github.io/s-code-docs/docs/privacy-security-comparison/",
       "links": [{"label": "Webpage", "url": "https://sai-foundation.github.io/s-code-docs/docs/privacy-security-comparison/"}, {"label": "Code", "url": "https://github.com/sai-foundation/s-code"}],
       "selected": true
@@ -59,6 +66,7 @@
       "thumbnail": "images/publications/physics-of-coding-agents.webp",
       "authors": ["Langlin Wan", "Zhixuan Liang", "Guangyuan Wang", "Shilong Liu"],
       "venue": "Preprint. Under review, FSE 2027",
+      "tldr": "We show that a coding agent’s edit interface works best when it asks for the forms a model writes most reliably: task success hides large differences in cost and failure modes across interfaces, which motivates Verified Selection, a new edit interface built on this fit.",
       "url": "https://www.preprints.org/manuscript/202610.1889",
       "links": [{"label": "Paper", "url": "https://www.preprints.org/manuscript/202610.1889"}, {"label": "Code", "url": "https://github.com/WanLanglin/fit-not-format-edit-harness"}, {"label": "Webpage", "url": "https://wanlanglin.github.io/fit-not-format-edit-harness/"}],
       "selected": true
@@ -68,6 +76,7 @@
       "thumbnail": "images/publications/meta-trust.webp",
       "authors": ["Guangyuan Wang", "Padideh Nouri", "Doina Precup"],
       "venue": "Math Reasoning and AI Workshop, NeurIPS 2026",
+      "tldr": "We introduce Meta-TA, which meta-learns where an RL trust region should constrain an LLM’s token-level updates during reasoning, replacing hand-set allocations with one learned from feedback.",
       "url": "https://openreview.net/pdf?id=n1ceQKZApq",
       "selected": true
     },
@@ -76,6 +85,7 @@
       "thumbnail": "images/publications/ss-esoap.webp",
       "authors": ["Guangyuan Wang", "Mads Toftrup", "Sebastian Loeschcke", "Yixuan Wang", "Anima Anandkumar"],
       "venue": "Preprint, 2026. Under review at JMLR",
+      "tldr": "We introduce SS-ESOAP, a self-scaled Kronecker-factored preconditioner for physics-informed neural networks that adapts its scale and eigenbasis to the gradient statistics, reaching lower residuals than first-order and SOAP-style optimizers on most PDE benchmarks.",
       "url": "https://www.alphaxiv.org/abs/2608.29448",
       "links": [{"label": "Paper", "url": "https://www.alphaxiv.org/abs/2608.29448"}, {"label": "Code", "url": "https://github.com/al2wang/ss_esoap_nips/blob/main/ss_esoap.py"}],
       "selected": true
@@ -85,6 +95,7 @@
       "thumbnail": "images/publications/reflected-diffusion.webp",
       "authors": ["Liyuan Xu*", "Guangyuan Wang*", "Junwei Lu"],
       "venue": "Preprint, in preparation",
+      "tldr": "We build a physics-informed score estimator for reflected diffusion models and prove a dimension-free, uniform-in-time error bound, with experiments showing that enforcing the Fokker–Planck boundary condition gives competitive likelihoods and efficient sampling.",
       "selected": true
     },
     {
@@ -92,6 +103,7 @@
       "thumbnail": "images/publications/phases-of-muon.webp",
       "authors": ["Elliot Paquette", "Noah Marshall", "Lucas Benigni", "Guangyuan Wang", "Atish Agarwala", "Courtney Paquette"],
       "venue": "NeurIPS 2026",
+      "tldr": "We derive the high-dimensional training dynamics of stochastic Muon and SignSGD and map out a phase diagram of when each optimizer wins, showing why replacing Adam with Muon is not trivial even from a pure optimization perspective.",
       "url": "https://arxiv.org/abs/2605.09552",
       "links": [{"label": "Paper", "url": "https://arxiv.org/pdf/2605.09552"}, {"label": "Code", "url": "https://github.com/al2wang/phases-of-muon"}, {"label": "Webpage", "url": "https://mlexpos.github.io/phases-of-muon/"}],
       "selected": true
@@ -101,6 +113,7 @@
       "thumbnail": "images/publications/isotropic-scaling-muon.webp",
       "authors": ["Guangyuan Wang", "Elliot Paquette†", "Atish Agarwala†"],
       "venue": "Optimization for Machine Learning Workshop, NeurIPS 2025",
+      "tldr": "We derive risk recursions for Muon and SGD in high-dimensional matrix linear regression, finding how batch size should scale with dimension and suggesting that Muon’s default normalization may not preserve its nonlinear behavior at scale.",
       "url": "https://openreview.net/pdf?id=6sh0yBvLr4",
       "links": [{"label": "Paper", "url": "https://openreview.net/pdf?id=6sh0yBvLr4"}, {"label": "Code", "url": "https://github.com/al2wang/muon"}, {"label": "Webpage", "url": "https://neurips.cc/virtual/2025/124372"}],
       "selected": true
@@ -110,6 +123,7 @@
       "thumbnail": "images/publications/langevin-sac.webp",
       "authors": ["Haque Ishfaq*", "Guangyuan Wang*", "Sami Nur Islam", "Doina Precup"],
       "venue": "ICLR 2025",
+      "tldr": "We introduce LSAC, an actor-critic algorithm that explores through the uncertainty of a distributional critic learned with Langevin Monte Carlo, aided by parallel tempering and diffusion-generated actions, bringing Thompson-sampling-style exploration to continuous control.",
       "url": "https://openreview.net/pdf?id=FvQsk3la17",
       "links": [{"label": "Paper", "url": "https://openreview.net/pdf?id=FvQsk3la17"}, {"label": "Code", "url": "https://github.com/hmishfaq/LSAC"}],
       "selected": true

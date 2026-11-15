@@ -58,15 +58,21 @@ def render_thumbnail(publication):
     return '<div class="{}" aria-hidden="true">{}</div>'.format(classes, inner)
 
 
-def render_links(publication):
-    """Tag buttons (Paper, Code, Webpage, ...). Without explicit "links", the main URL becomes a Paper tag."""
+def render_links(publication, slug):
+    """Tag buttons (Paper, Code, Webpage, ...) plus a TL;DR toggle when the paper has a one-sentence summary.
+
+    Without explicit "links", the main URL becomes a Paper tag.
+    """
     links = publication.get("links")
     if links is None:
         links = [{"label": "Paper", "url": publication["url"]}] if publication.get("url") else []
-    if not links:
-        return ""
     tags = "".join('<li><a href="{}">{}</a></li>'.format(link_url(link["url"]), escape(link["label"]))
                    for link in links)
+    if publication.get("tldr"):
+        tags += ('<li><button class="tldr-toggle" type="button" aria-expanded="false" '
+                 'aria-controls="tldr-{}">TL;DR</button></li>'.format(slug))
+    if not tags:
+        return ""
     return '<ul class="publication-links" aria-label="Links">{}</ul>'.format(tags)
 
 
@@ -86,9 +92,11 @@ def render_publication(publication):
         lines.append('    <p class="publication-authors">{}</p>'.format(
             ", ".join(render_author(author) for author in publication["authors"])))
     lines.append('    <p class="publication-venue">{}</p>'.format(escape(publication["venue"])))
-    links = render_links(publication)
+    links = render_links(publication, slug)
     if links:
         lines.append("    " + links)
+    if publication.get("tldr"):
+        lines.append('    <p class="publication-tldr" id="tldr-{}" hidden>{}</p>'.format(slug, escape(publication["tldr"])))
     lines.extend(["  </div>", "</li>"])
     return indent("\n".join(lines), " " * 8)
 
