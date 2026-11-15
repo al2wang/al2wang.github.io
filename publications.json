@@ -13,7 +13,7 @@
       "thumbnail": "images/publications/chandelier-debiasing.webp?v=paper-fig",
       "authors": ["Guangyuan Wang", "Junwei Lu"],
       "venue": "Preprint, in preparation",
-      "tldr": "We develop pointwise uncertainty quantification for rewards learned from preference comparisons under a Bradley–Terry model, combining a reward estimator with a Green-function debiasing correction and proving rates and asymptotic normality for the resulting estimator.",
+      "tldr": "We develop principled pointwise uncertainty quantification for rewards learned from preference comparisons under a Bradley–Terry model, with a Green-function debiasing correction whose estimator provably attains oracle rates and asymptotic normality.",
       "selected": true
     },
     {
@@ -29,7 +29,7 @@
       "thumbnail": "images/publications/adaptive-index-reuse.webp",
       "authors": ["Guangyuan Wang", "Yifan Zhang", "Shilong Liu"],
       "venue": "Preprint. Under review, NAACL 2027",
-      "tldr": "We introduce AIR (Adaptive Index Reuse), which uses reinforcement learning to decide when a long-horizon language agent should refresh its sparse-attention selections, improving both success and speed at the same compute budget on coding, terminal and tool-use benchmarks.",
+      "tldr": "Building on IndexCache’s cross-layer index reuse for sparse-attention models such as GLM, we introduce AIR (Adaptive Index Reuse), which uses reinforcement learning to decide when a long-horizon language agent should refresh its sparse-attention selections, improving both success and speed at the same compute budget on coding, terminal and tool-use benchmarks.",
       "url": "https://arxiv.org/abs/2611.01429",
       "selected": true
     },
@@ -85,7 +85,7 @@
       "thumbnail": "images/publications/ss-esoap.webp",
       "authors": ["Guangyuan Wang", "Mads Toftrup", "Sebastian Loeschcke", "Yixuan Wang", "Anima Anandkumar"],
       "venue": "Preprint, 2026. Under review at JMLR",
-      "tldr": "We introduce SS-ESOAP, a self-scaled Kronecker-factored preconditioner for physics-informed neural networks that adapts its scale and eigenbasis to the gradient statistics, reaching lower residuals than first-order and SOAP-style optimizers on most PDE benchmarks.",
+      "tldr": "We introduce SS-ESOAP, a principled self-scaled Kronecker-factored preconditioner for physics-informed neural networks whose scaling factor provably solves a secant-matching problem, reaching lower residuals than first-order and SOAP-style optimizers on most PDE benchmarks.",
       "url": "https://www.alphaxiv.org/abs/2608.29448",
       "links": [{"label": "Paper", "url": "https://www.alphaxiv.org/abs/2608.29448"}, {"label": "Code", "url": "https://github.com/al2wang/ss_esoap_nips/blob/main/ss_esoap.py"}],
       "selected": true
@@ -95,7 +95,7 @@
       "thumbnail": "images/publications/reflected-diffusion.webp",
       "authors": ["Liyuan Xu*", "Guangyuan Wang*", "Junwei Lu"],
       "venue": "Preprint, in preparation",
-      "tldr": "We build a physics-informed score estimator for reflected diffusion models and prove a dimension-free, uniform-in-time error bound, with experiments showing that enforcing the Fokker–Planck boundary condition gives competitive likelihoods and efficient sampling.",
+      "tldr": "We build a physics-informed score estimator for reflected diffusion models with a provable dimension-free, uniform-in-time error bound, and show that enforcing the Fokker–Planck boundary condition gives competitive likelihoods and efficient sampling.",
       "selected": true
     },
     {
@@ -103,7 +103,7 @@
       "thumbnail": "images/publications/phases-of-muon.webp",
       "authors": ["Elliot Paquette", "Noah Marshall", "Lucas Benigni", "Guangyuan Wang", "Atish Agarwala", "Courtney Paquette"],
       "venue": "NeurIPS 2026",
-      "tldr": "We derive the high-dimensional training dynamics of stochastic Muon and SignSGD and map out a phase diagram of when each optimizer wins, showing why replacing Adam with Muon is not trivial even from a pure optimization perspective.",
+      "tldr": "We provably characterize the high-dimensional training dynamics of stochastic Muon and SignSGD, deriving explicit deterministic dynamics and a phase diagram of when each optimizer wins, which shows why replacing Adam with Muon is not trivial even from a pure optimization perspective.",
       "url": "https://arxiv.org/abs/2605.09552",
       "links": [{"label": "Paper", "url": "https://arxiv.org/pdf/2605.09552"}, {"label": "Code", "url": "https://github.com/al2wang/phases-of-muon"}, {"label": "Webpage", "url": "https://mlexpos.github.io/phases-of-muon/"}],
       "selected": true
@@ -113,7 +113,7 @@
       "thumbnail": "images/publications/isotropic-scaling-muon.webp",
       "authors": ["Guangyuan Wang", "Elliot Paquette†", "Atish Agarwala†"],
       "venue": "Optimization for Machine Learning Workshop, NeurIPS 2025",
-      "tldr": "We derive risk recursions for Muon and SGD in high-dimensional matrix linear regression, finding how batch size should scale with dimension and suggesting that Muon’s default normalization may not preserve its nonlinear behavior at scale.",
+      "tldr": "We derive exact risk recursions for Muon and SGD in high-dimensional matrix linear regression, giving principled rules for scaling batch size with dimension and suggesting that Muon’s default normalization may not preserve its nonlinear behavior at scale.",
       "url": "https://openreview.net/pdf?id=6sh0yBvLr4",
       "links": [{"label": "Paper", "url": "https://openreview.net/pdf?id=6sh0yBvLr4"}, {"label": "Code", "url": "https://github.com/al2wang/muon"}, {"label": "Webpage", "url": "https://neurips.cc/virtual/2025/124372"}],
       "selected": true
