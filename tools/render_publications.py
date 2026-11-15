@@ -13,7 +13,7 @@ from urllib.parse import urlsplit
 ROOT = Path(__file__).resolve().parent.parent
 START = "      <!-- PUBLICATIONS:START -->"
 END = "      <!-- PUBLICATIONS:END -->"
-MORE_LABEL = "More papers under review"
+MORE_LABEL = "More papers in preparation"
 SELF = "Guangyuan Wang"
 # Trailing author marks: * equal contribution, † equal advising.
 AUTHOR_MARKS = "*†"
