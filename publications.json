@@ -4,21 +4,21 @@
       "title": "Can Language Models Learn Forever? Stationarity and Plasticity Under Continual Pretraining",
       "thumbnail": "images/publications/continual-pretraining.webp",
       "authors": ["Guangyuan Wang", "Guanning Zeng", "Yuda Song", "Andrea Zanette"],
-      "venue": "In preparation for submission to ICML 2027",
+      "venue": "Preprint, in preparation",
       "selected": true
     },
     {
       "title": "Inference on Ceilings: Chandelier Debiasing for Optimal Policy Value with Continuous Treatments under Preference Data",
       "thumbnail": "images/publications/chandelier-debiasing.webp",
       "authors": ["Guangyuan Wang", "Junwei Lu"],
-      "venue": "In preparation for submission to ICML 2027",
+      "venue": "Preprint, in preparation",
       "selected": true
     },
     {
       "title": "ReflectAgents: Teaching Multimodal Agents to Say No",
       "thumbnail": "images/publications/reflectagents.webp",
       "authors": ["Bo Gao", "Guangyuan Wang", "Guanning Zeng", "Andrea Zanette"],
-      "venue": "In preparation for submission to CVPR 2027",
+      "venue": "Preprint, in preparation",
       "selected": true
     },
     {
@@ -84,7 +84,7 @@
       "title": "Solving Reflected Diffusion Models: A Physics-Informed Approach",
       "thumbnail": "images/publications/reflected-diffusion.webp",
       "authors": ["Liyuan Xu*", "Guangyuan Wang*", "Junwei Lu"],
-      "venue": "Preprint in preparation",
+      "venue": "Preprint, in preparation",
       "selected": true
     },
     {
