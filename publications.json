@@ -81,16 +81,6 @@
       "selected": true
     },
     {
-      "title": "SS-ESOAP: Self-Scaled Adaptive Preconditioning for Physics-Informed Learning",
-      "thumbnail": "images/publications/ss-esoap.webp",
-      "authors": ["Guangyuan Wang", "Mads Toftrup", "Sebastian Loeschcke", "Yixuan Wang", "Anima Anandkumar"],
-      "venue": "Preprint, 2026. Under review at JMLR",
-      "tldr": "We introduce SS-ESOAP, a principled self-scaled Kronecker-factored preconditioner for physics-informed neural networks whose scaling factor provably solves a secant-matching problem, reaching lower residuals than first-order and SOAP-style optimizers on most PDE benchmarks.",
-      "url": "https://www.alphaxiv.org/abs/2608.29448",
-      "links": [{"label": "Paper", "url": "https://www.alphaxiv.org/abs/2608.29448"}, {"label": "Code", "url": "https://github.com/al2wang/ss_esoap_nips/blob/main/ss_esoap.py"}],
-      "selected": true
-    },
-    {
       "title": "Solving Reflected Diffusion Models: A Physics-Informed Approach",
       "thumbnail": "images/publications/reflected-diffusion.webp",
       "authors": ["Liyuan Xu*", "Guangyuan Wang*", "Junwei Lu"],
@@ -106,6 +96,16 @@
       "tldr": "We provably characterize the high-dimensional training dynamics of stochastic Muon and SignSGD, deriving explicit deterministic dynamics and a phase diagram of when each optimizer wins, which shows why replacing Adam with Muon is not trivial even from a pure optimization perspective.",
       "url": "https://arxiv.org/abs/2605.09552",
       "links": [{"label": "Paper", "url": "https://arxiv.org/pdf/2605.09552"}, {"label": "Code", "url": "https://github.com/al2wang/phases-of-muon"}, {"label": "Webpage", "url": "https://mlexpos.github.io/phases-of-muon/"}],
+      "selected": true
+    },
+    {
+      "title": "SS-ESOAP: Self-Scaled Adaptive Preconditioning for Physics-Informed Learning",
+      "thumbnail": "images/publications/ss-esoap.webp",
+      "authors": ["Guangyuan Wang", "Mads Toftrup", "Sebastian Loeschcke", "Yixuan Wang", "Anima Anandkumar"],
+      "venue": "Preprint, 2026. Under review at JMLR",
+      "tldr": "We introduce SS-ESOAP, a principled self-scaled Kronecker-factored preconditioner for physics-informed neural networks whose scaling factor provably solves a secant-matching problem, reaching lower residuals than first-order and SOAP-style optimizers on most PDE benchmarks.",
+      "url": "https://www.alphaxiv.org/abs/2608.29448",
+      "links": [{"label": "Paper", "url": "https://www.alphaxiv.org/abs/2608.29448"}, {"label": "Code", "url": "https://github.com/al2wang/ss_esoap_nips/blob/main/ss_esoap.py"}],
       "selected": true
     },
     {
