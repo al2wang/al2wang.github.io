@@ -58,7 +58,7 @@
       "title": "Physics of Coding Agents: Fit, Not Format at the Edit Interface",
       "thumbnail": "images/publications/physics-of-coding-agents.webp",
       "authors": ["Langlin Wan", "Zhixuan Liang", "Guangyuan Wang", "Shilong Liu"],
-      "venue": "Preprint. Under review, FSE 2026",
+      "venue": "Preprint. Under review, FSE 2027",
       "url": "https://www.preprints.org/manuscript/202610.1889",
       "links": [{"label": "Paper", "url": "https://www.preprints.org/manuscript/202610.1889"}, {"label": "Code", "url": "https://github.com/WanLanglin/fit-not-format-edit-harness"}, {"label": "Webpage", "url": "https://wanlanglin.github.io/fit-not-format-edit-harness/"}],
       "selected": true
