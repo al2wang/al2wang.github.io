@@ -1,41 +1,63 @@
-% Inference on Ceilings: Chandelier Debiasing for Optimal Policy Value with Continuous Treatments under Preference Data
-% Inference on the peak ("ceiling") of a value curve over a continuous treatment, learned from pairwise preferences.
-\documentclass[tikz,border=0pt]{standalone}
-\input{thumbstyle}
+% Inference on Ceilings: Chandelier Debiasing for Optimal Policy Value with Continuous Treatments
+% under Preference Data.
+% Figure 1 (cross-fitting workflow) of the paper, re-laid out to fill a 16:10 thumbnail, with the
+% paper's key displays underneath: the Green-density decomposition (Theorem 3.2), the orthogonal
+% score (eq. score-pie) and the asymptotic normality of the debiased estimator (Theorem 3.5).
+% Adapted from the paper source (pref_optim_draft/junwei_lab_tex_template: figures/method.tex,
+% draft_main.tex). Labels and notation follow the paper.
+\documentclass[tikz,border=1pt]{standalone}
+\usepackage{times}
+\usepackage{amsmath,amssymb}
+\usetikzlibrary{arrows.meta,backgrounds,calc,positioning,fit}
+\definecolor{cdteal}{HTML}{178A83}
+\definecolor{cdtealfill}{HTML}{E2F5F2}
+\definecolor{cdorange}{HTML}{D47A1F}
+\definecolor{cdorangefill}{HTML}{FFF0DD}
+\definecolor{cdpurple}{HTML}{7556A5}
+\definecolor{cdpurplefill}{HTML}{F0E9FA}
+\definecolor{cdgray}{HTML}{59636E}
+\definecolor{cdgrayfill}{HTML}{F2F4F6}
 \begin{document}
-\begin{tikzpicture}
-\thumbcanvas
-% Ceiling.
-\fill[ink] (0.6,9.1) rectangle (15.4,9.35);
-\foreach \x in {0.8,1.35,...,15.1} \draw[ink!40, line width=1.1pt] (\x,9.35) -- ++(0.35,0.45);
-% Schematic value curve over the treatment with an uncertainty band (no data).
-\fill[accent!14]
-  plot[smooth] coordinates {(1.4,2.5) (3.5,3.5) (6.0,5.1) (8.4,6.6) (9.6,6.95) (10.8,6.6) (12.8,5.1) (14.6,3.9)}
-  -- plot[smooth] coordinates {(14.6,2.9) (12.8,4.1) (10.8,5.6) (9.6,5.95) (8.4,5.6) (6.0,4.1) (3.5,2.5) (1.4,1.5)}
-  -- cycle;
-\draw[accent, line width=3pt]
-  plot[smooth] coordinates {(1.4,2.0) (3.5,3.0) (6.0,4.6) (8.4,6.1) (9.6,6.45) (10.8,6.1) (12.8,4.6) (14.6,3.4)};
-\draw[arrow=ink!70] (1.0,1.2) -- (15.2,1.2);
-\draw[dashed, ink!40, line width=1.4pt] (9.6,6.45) -- (9.6,1.2);
-\node[text=ink] at (9.6,0.62) {\lbl{$t^\star$}};
-\node[text=ink] at (14.9,0.62) {\lbl{$t$}};
-% Inference on the optimal value: estimate with an interval.
-\draw[ink, line width=2.4pt] (9.6,5.75) -- (9.6,7.15);
-\draw[ink, line width=2.4pt] (9.25,5.75) -- (9.95,5.75) (9.25,7.15) -- (9.95,7.15);
-\fill[accent] (9.6,6.45) circle (0.2);
-\node[text=ink] at (11.45,7.15) {\lbl{$V^\star$}};
-% The chandelier hangs from the ceiling right above the optimum.
-\draw[ink!70, line width=1.8pt] (9.6,9.1) -- (9.6,8.85);
-\fill[ink!70] (9.6,8.8) circle (0.16);
-\foreach \dx/\dy in {-2.0/0.25,-1.0/0.5,0/0.62,1.0/0.5,2.0/0.25} {
-  \draw[ink!60, line width=1.5pt] (9.6,8.8) .. controls ({9.6+0.5*\dx},8.65) .. ({9.6+\dx},{8.8-\dy});
-  \fill[sun!35] ({9.6+\dx},{8.8-\dy-0.25}) circle (0.42);
-  \node[diamond, fill=sun, draw=orange, line width=1.2pt, inner sep=0pt, minimum width=0.38cm, minimum height=0.62cm]
-    at ({9.6+\dx},{8.8-\dy-0.25}) {};
-}
-% Preference data: pairwise comparisons.
-\node[circle, fill=teal!18, draw=teal, line width=1.6pt, minimum size=1.1cm, text=teal] (a) at (2.0,7.6) {\lbl{a}};
-\node[text=ink] at (3.05,7.6) {\lbl{$\succ$}};
-\node[circle, fill=violet!18, draw=violet, line width=1.6pt, minimum size=1.1cm, text=violet] (b) at (4.1,7.6) {\lbl{b}};
+\begin{tikzpicture}[
+  box/.style={draw=cdgray,fill=cdgrayfill,rounded corners=2pt,thick,align=center,
+    inner sep=3pt,font=\footnotesize,text width=3.15cm,minimum height=1.0cm},
+  sub/.style={font=\scriptsize},
+  flow/.style={-{Latex[length=1.8mm]},thick,draw=cdgray},
+  node distance=0.62cm and 0.75cm]
+% Row 1: nuisances on other folds -> target Green direction -> held-out score.
+\node[box] (train) {Other folds\\{\scriptsize fit centered $\widehat r$ and $\widehat g_0$}};
+\node[box,draw=cdpurple,fill=cdpurplefill,right=of train] (green) {Target Green direction\\{\scriptsize include $1/\widehat d_x$}};
+\node[box,draw=cdteal,fill=cdtealfill,right=of green] (score) {Held-out pairs\\{\scriptsize evaluate the score $\psi_{\pi_e}$}};
+% Row 2 (right to left): orthogonal estimate -> contrast -> inference.
+\node[box,draw=cdteal,fill=cdtealfill,below=of score] (fit) {Orthogonal estimate\\{\scriptsize same final learner as oracle}};
+\node[box,left=of fit] (point) {Point or fixed contrast\\{\scriptsize growing Riesz direction}};
+\node[box,draw=cdorange,fill=cdorangefill,left=of point] (interval) {Inference\\{\scriptsize SE plus negligible drift}};
+\draw[flow] (train) -- (green);
+\draw[flow] (green) -- (score);
+\draw[flow] (score) -- (fit);
+\draw[flow] (fit) -- (point);
+\draw[flow] (point) -- (interval);
+\begin{scope}[on background layer]
+  \node[draw=cdgray!60,densely dashed,rounded corners=3pt,inner sep=4pt,fit=(train)(green)] (cf) {};
+\end{scope}
+\node[sub,text=cdgray,anchor=south west] at (cf.north west) {cross-fitting over $K$ folds};
+% Key displays, centered under the workflow.
+\coordinate (mid) at ($(cf.west)!0.5!(score.east)$);
+\node[inner sep=5pt,anchor=north,font=\footnotesize]
+  (eqs) at ([yshift=-0.42cm]mid |- point.south) {%
+  \renewcommand{\arraystretch}{1.9}%
+  \begin{tabular}{@{}r@{\hspace{0.9em}}l@{}}
+  \textbf{Green density} &
+  $g^*(x,y_1,y_2)=\dfrac{\delta(y_1-y_2)}{d_x(y_1)\,\pi_0(y_1\mid x)}+g_0^*(x,y_1,y_2)$\\
+  \textbf{Orthogonal score} &
+  $\psi_{\pi_e}(W,r,g)=\displaystyle\int r(X,z)\,\pi_e(z\mid X)\,dz+\tfrac12\,D[g]\,\{Z-\mu(D[r])\}$\\
+  \textbf{Asymptotic normality} &
+  $\sqrt n\,\big(\widehat r^{\,d}_{\pi_e}-r^*_{\pi_e}\big)\xrightarrow{d}\mathcal N\big(0,\ \sigma_r^2(\pi_e)+\sigma_g^2(\pi_e)\big)$
+  \end{tabular}};
+% Equation panel spans the width of the workflow above.
+\begin{scope}[on background layer]
+  \draw[cdpurple!70,fill=cdpurplefill!60,rounded corners=3pt,thick]
+    (cf.west |- eqs.north) rectangle (score.east |- eqs.south);
+\end{scope}
 \end{tikzpicture}
 \end{document}
