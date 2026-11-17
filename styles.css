@@ -1,41 +1,27 @@
 /* Academic layout adapted from al-folio; see assets/licenses/al-folio.txt. */
-/* Palatino Linotype where installed; otherwise TeX Gyre Pagella, a free Palatino clone (GUST Font License). */
+/* Roboto, as on al-folio sites (SIL Open Font License, see assets/fonts/ROBOTO-OFL.txt).
+   The upright file is a variable font covering weights 300-700. */
 @font-face {
-  font-family: "Pagella Web";
+  font-family: "Roboto";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300 700;
   font-display: swap;
-  src: url("assets/fonts/pagella-regular-latin.woff2") format("woff2");
+  src: url("assets/fonts/roboto-latin.woff2") format("woff2");
 }
 @font-face {
-  font-family: "Pagella Web";
+  font-family: "Roboto";
   font-style: italic;
-  font-weight: 400;
+  font-weight: 300;
   font-display: swap;
-  src: url("assets/fonts/pagella-italic-latin.woff2") format("woff2");
+  src: url("assets/fonts/roboto-italic-latin.woff2") format("woff2");
 }
+/* Only the three characters of the Chinese name (SIL OFL, see assets/fonts/NOTO-SANS-SC-OFL.txt). */
 @font-face {
-  font-family: "Pagella Web";
+  font-family: "Noto Sans SC Name";
   font-style: normal;
-  font-weight: 700;
+  font-weight: 300;
   font-display: swap;
-  src: url("assets/fonts/pagella-bold-latin.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Pagella Web";
-  font-style: italic;
-  font-weight: 700;
-  font-display: swap;
-  src: url("assets/fonts/pagella-bolditalic-latin.woff2") format("woff2");
-}
-
-/* Only the three characters of the Chinese name (SIL OFL, see assets/fonts/NOTO-SERIF-SC-OFL.txt). */
-@font-face {
-  font-family: "Noto Serif SC Name";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/fonts/noto-serif-sc-name.woff2") format("woff2");
+  src: url("assets/fonts/noto-sans-sc-name.woff2") format("woff2");
 }
 
 :root {
@@ -89,9 +75,9 @@ body {
   flex-direction: column;
   background: var(--background);
   color: var(--text);
-  font-family: "Palatino Linotype", Palatino, "Book Antiqua", "TeX Gyre Pagella", "Pagella Web", serif;
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.45;
   overflow-wrap: break-word;
 }
@@ -111,14 +97,14 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   border-radius: 2px;
 }
 button { font: inherit; cursor: pointer; }
-strong { font-weight: 700; }
+strong { font-weight: 500; }
 p { margin: 0 0 1rem; }
 h1, h2, h3 { line-height: 1.25; }
-h1 { margin: 0 0 .55rem; font-size: 1.75rem; font-weight: 400; }
-.name-zh { margin-left: .1em; font-size: .86em; font-family: "Noto Serif SC Name", "Songti SC", "STSong", "Noto Serif CJK SC", "Source Han Serif SC", SimSun, serif; font-weight: 400; }
+h1 { margin: 0 0 .55rem; font-size: 1.75rem; font-weight: 300; }
+.name-zh { margin-left: .1em; font-size: .86em; font-family: "Noto Sans SC Name", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; font-weight: 300; }
 h1 strong { font-weight: 700; }
-h2 { margin: 0 0 .6rem; font-size: 1.4rem; font-weight: 400; }
-h3 { margin: 0; font-size: 1rem; font-weight: 700; }
+h2 { margin: 0 0 .6rem; font-size: 1.4rem; font-weight: 300; }
+h3 { margin: 0; font-size: 1rem; font-weight: 400; }
 svg { width: 21px; height: 21px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .container { width: min(100% - 3rem, 820px); margin-inline: auto; }
 .skip-link { position: fixed; top: -6rem; left: 1rem; z-index: 10; padding: .5rem 1rem; background: var(--background); }
@@ -133,9 +119,9 @@ svg { width: 21px; height: 21px; fill: none; stroke: currentColor; stroke-width:
 }
 .navigation { min-height: 57px; display: flex; align-items: center; justify-content: flex-end; gap: .8rem; }
 .navigation-links { display: flex; align-items: center; gap: 1.5rem; margin: 0; padding: 0; list-style: none; }
-.navigation-links a { display: block; padding-block: .8rem; color: var(--text); font-weight: 400; }
+.navigation-links a { display: block; padding-block: .8rem; color: var(--text); font-weight: 300; }
 .navigation-links a:hover, .navigation-links a[aria-current] { color: var(--accent); text-decoration: none; }
-.navigation-links a[aria-current] { font-weight: 700; }
+.navigation-links a[aria-current] { font-weight: 400; }
 .theme-toggle, .menu-toggle { display: inline-flex; align-items: center; justify-content: center; padding: 0; border: 0; background: transparent; color: var(--text); min-height: 44px; min-width: 44px; }
 .theme-toggle:hover, .menu-toggle:hover { color: var(--accent); }
 .menu-toggle { display: none; gap: .6rem; }
@@ -150,18 +136,18 @@ svg { width: 21px; height: 21px; fill: none; stroke: currentColor; stroke-width:
 main.container { flex: 1; padding-top: 2.9rem; padding-bottom: 3.5rem; }
 main > section + section { margin-top: var(--section-gap); }
 .intro-header { margin-bottom: 1.3rem; }
-.intro-description { margin-bottom: 0; font-weight: 700; }
+.intro-description { margin-bottom: 0; font-weight: 500; }
 .profile { float: right; width: 30%; margin: .2rem 0 1.2rem 1.6rem; }
 .profile img { display: block; width: 100%; height: auto; aspect-ratio: 1; border-radius: 4px; box-shadow: 0 2px 5px #0003; }
 .research-interests { margin-top: var(--section-gap); }
 .interest-list { margin: 0 0 1rem; padding-left: 1.25rem; line-height: 1.45; }
 .interest-list li::marker { color: var(--accent); }
 .contact-links { display: flex; flex-wrap: wrap; gap: .2rem 1rem; padding: 0; margin: .25rem 0 0; list-style: none; }
-.contact-label { font-weight: 700; }
+.contact-label { font-weight: 500; }
 
 .dated-list { margin: 0; }
 .dated-list > div { display: grid; grid-template-columns: 5.4rem minmax(0, 1fr); column-gap: .9rem; }
-.dated-list dt { font-weight: 700; }
+.dated-list dt { font-weight: 500; }
 .dated-list dd { margin: 0; }
 .news-list > div { padding-block: .14rem; }
 .older-news { margin-top: .3rem; }
@@ -198,7 +184,7 @@ a.publication-thumb:hover { border-color: var(--accent); box-shadow: 0 4px 14px 
   text-align: center;
 }
 .publication-authors, .publication-venue { margin: 0; }
-.publication-authors .self { font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.publication-authors .self { text-decoration: underline; text-underline-offset: 3px; }
 .publication-authors sup, .publication-note sup { font-size: .75em; line-height: 0; }
 .publication-venue { font-style: italic; color: var(--muted); }
 .publication-links { display: flex; flex-wrap: wrap; gap: .35rem; margin: .35rem 0 0; padding: 0; list-style: none; }
