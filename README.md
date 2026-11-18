@@ -59,12 +59,12 @@ Push to `main` to deploy through the existing GitHub Pages configuration.
 
 ## Credits
 
-The layout follows Jonas Hübotter's al-folio site, with Newsreader typography.
+The layout follows Jonas Hübotter's al-folio site, with Roboto typography.
 The al-folio MIT license is retained in
-`assets/licenses/al-folio.txt`. Text uses Newsreader, matching jonhue.github.io, served locally from
-`assets/fonts/newsreader-*.woff2` (SIL Open Font License in `assets/fonts/NEWSREADER-OFL.txt`). The Chinese name uses a
-three-character subset of Noto Serif SC (`assets/fonts/noto-serif-sc-name.woff2`, SIL Open Font License in
-`assets/fonts/NOTO-SERIF-SC-OFL.txt`). The repository's existing MIT license is
+`assets/licenses/al-folio.txt`. Text uses Roboto, matching the al-folio default, served locally from
+`assets/fonts/roboto-*.woff2` (SIL Open Font License in `assets/fonts/ROBOTO-OFL.txt`). The Chinese name uses a
+three-character subset of Noto Sans SC Light (`assets/fonts/noto-sans-sc-name.woff2`, SIL Open Font License in
+`assets/fonts/NOTO-SANS-SC-OFL.txt`). The repository's existing MIT license is
 preserved in `LICENSE`.
 
 ## Placeholder portrait
