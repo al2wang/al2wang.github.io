@@ -83,6 +83,8 @@ body {
   text-rendering: optimizeLegibility;
   font-variant-ligatures: common-ligatures;
   font-feature-settings: "liga" 1, "kern" 1;
+  /* Newsreader's small-print optical size: slightly wider, sturdier letters everywhere. */
+  font-variation-settings: "opsz" 12;
   overflow-wrap: break-word;
 }
 
