@@ -81,6 +81,8 @@ body {
   line-height: 1.45;
   font-kerning: normal;
   text-rendering: optimizeLegibility;
+  font-variant-ligatures: common-ligatures;
+  font-feature-settings: "liga" 1, "kern" 1;
   overflow-wrap: break-word;
 }
 
