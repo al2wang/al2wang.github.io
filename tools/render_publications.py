@@ -14,6 +14,8 @@ ROOT = Path(__file__).resolve().parent.parent
 START = "      <!-- PUBLICATIONS:START -->"
 END = "      <!-- PUBLICATIONS:END -->"
 MORE_LABEL = "More papers in preparation"
+# Author lists stay in publications.json but are not shown for papers behind the toggle (for now).
+SHOW_HELD_AUTHORS = False
 SELF = "Guangyuan Wang"
 # Trailing author marks: * equal contribution, † equal advising.
 AUTHOR_MARKS = "*†"
@@ -76,7 +78,7 @@ def render_links(publication, slug):
     return '<ul class="publication-links" aria-label="Links">{}</ul>'.format(tags)
 
 
-def render_publication(publication):
+def render_publication(publication, show_authors=True):
     title = escape(publication["title"])
     if publication.get("url"):
         title = '<a href="{}">{}</a>'.format(link_url(publication["url"]), title)
@@ -88,7 +90,7 @@ def render_publication(publication):
         '    <h3 class="publication-title">{}</h3>'.format(title),
     ]
     # An empty author list withholds authors (e.g. papers under anonymous review).
-    if publication.get("authors"):
+    if show_authors and publication.get("authors"):
         lines.append('    <p class="publication-authors">{}</p>'.format(
             ", ".join(render_author(author) for author in publication["authors"])))
     lines.append('    <p class="publication-venue">{}</p>'.format(escape(publication["venue"])))
@@ -116,7 +118,7 @@ def render_section(selected):
         parts += ['      <details class="more-publications">',
                   "        <summary>{}</summary>".format(MORE_LABEL),
                   '        <ol class="publication-list">',
-                  *[indent(render_publication(publication), "  ") for publication in held],
+                  *[indent(render_publication(publication, SHOW_HELD_AUTHORS), "  ") for publication in held],
                   "        </ol>",
                   "      </details>"]
     return "\n".join(parts)
