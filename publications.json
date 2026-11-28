@@ -28,7 +28,7 @@
       "title": "When Should an Agent Refresh? Adaptive Index Reuse for Efficient Long-Horizon Agentic Reasoning",
       "thumbnail": "images/publications/adaptive-index-reuse.webp",
       "authors": ["Guangyuan Wang", "Yifan Zhang", "Shilong Liu"],
-      "venue": "Preprint. Under review, NAACL 2027",
+      "venue": "arXiv preprint. Under review, NAACL 2027",
       "tldr": "Building on IndexCache’s cross-layer index reuse for sparse-attention models such as GLM, we introduce AIR (Adaptive Index Reuse), which uses reinforcement learning to decide when a long-horizon language agent should refresh its sparse-attention selections, improving both success and speed at the same compute budget on coding, terminal and tool-use benchmarks.",
       "url": "https://arxiv.org/abs/2611.01429",
       "selected": true
@@ -102,7 +102,7 @@
       "title": "SS-ESOAP: Self-Scaled Adaptive Preconditioning for Physics-Informed Learning",
       "thumbnail": "images/publications/ss-esoap.webp",
       "authors": ["Guangyuan Wang", "Mads Toftrup", "Sebastian Loeschcke", "Yixuan Wang", "Anima Anandkumar"],
-      "venue": "Preprint, 2026. Under review at JMLR",
+      "venue": "arXiv preprint, 2026. Under review at JMLR",
       "tldr": "We introduce SS-ESOAP, a principled self-scaled Kronecker-factored preconditioner for physics-informed neural networks whose scaling factor provably solves a secant-matching problem, reaching lower residuals than first-order and SOAP-style optimizers on most PDE benchmarks.",
       "url": "https://www.alphaxiv.org/abs/2608.29448",
       "links": [{"label": "Paper", "url": "https://www.alphaxiv.org/abs/2608.29448"}, {"label": "Code", "url": "https://github.com/al2wang/ss_esoap_nips/blob/main/ss_esoap.py"}],
