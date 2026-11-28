@@ -52,13 +52,13 @@
       "selected": true
     },
     {
-      "title": "Safe, Self-Evolving, and Swift Coding Agent",
+      "title": "Verified Experience and Shared Skills for Safe, Speedy, Self-Evolving Coding Agents",
       "thumbnail": "images/publications/s-code.webp",
       "authors": ["Guangyuan Wang", "Wei Deng", "Langlin Wan", "Yinling Zhang", "Shilong Liu"],
       "venue": "Manuscript in preparation",
       "tldr": "We present S-Code, an open-source coding harness whose self-evolution layer turns observed repairs into short, auditable lessons that later sessions and other agents can safely reuse, without changing model weights or agent code.",
-      "url": "https://sai-foundation.github.io/s-code-docs/docs/privacy-security-comparison/",
-      "links": [{"label": "Webpage", "url": "https://sai-foundation.github.io/s-code-docs/docs/privacy-security-comparison/"}, {"label": "Code", "url": "https://github.com/sai-foundation/s-code"}],
+      "url": "https://code.sai.foundation/",
+      "links": [{"label": "Webpage", "url": "https://code.sai.foundation/"}, {"label": "Docs", "url": "https://sai-foundation.github.io/s-code-docs/"}, {"label": "Code", "url": "https://github.com/sai-foundation/s-code"}],
       "selected": true
     },
     {
