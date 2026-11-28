@@ -37,9 +37,9 @@
       "title": "AIChipBench: Benchmarking LLM Agents for Automated AI Accelerator Design",
       "thumbnail": "images/publications/aichipbench.webp",
       "authors": ["Guangyuan Wang", "Chengran Li", "Minchen Luo", "Jichen Feng", "Mengdi Wang†", "Yifan Zhang†"],
-      "venue": "Preprint. Under review, ICLR 2027",
+      "venue": "arXiv preprint, 2026",
       "tldr": "We introduce AIChipBench, a benchmark that tests whether LLM coding agents can turn model specifications into working AI accelerator designs, with independent held-out checks that catch failures public tests miss.",
-      "url": "https://openreview.net/pdf?id=Qcpj94Y3zm",
+      "url": "https://arxiv.org/abs/2611.33093v1",
       "selected": true
     },
     {
