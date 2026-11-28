@@ -62,9 +62,7 @@ Push to `main` to deploy through the existing GitHub Pages configuration.
 The layout follows Jonas Hübotter's al-folio site, with Roboto typography.
 The al-folio MIT license is retained in
 `assets/licenses/al-folio.txt`. Text uses Roboto, matching the al-folio default, served locally from
-`assets/fonts/roboto-*.woff2` (SIL Open Font License in `assets/fonts/ROBOTO-OFL.txt`). The Chinese name uses a
-three-character subset of Noto Sans SC Light (`assets/fonts/noto-sans-sc-name.woff2`, SIL Open Font License in
-`assets/fonts/NOTO-SANS-SC-OFL.txt`). The repository's existing MIT license is
+`assets/fonts/roboto-*.woff2` (SIL Open Font License in `assets/fonts/ROBOTO-OFL.txt`). The repository's existing MIT license is
 preserved in `LICENSE`.
 
 ## Placeholder portrait

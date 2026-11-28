@@ -15,14 +15,6 @@
   font-display: swap;
   src: url("assets/fonts/roboto-italic-latin.woff2") format("woff2");
 }
-/* Only the three characters of the Chinese name (SIL OFL, see assets/fonts/NOTO-SANS-SC-OFL.txt). */
-@font-face {
-  font-family: "Noto Sans SC Name";
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url("assets/fonts/noto-sans-sc-name.woff2") format("woff2");
-}
 
 :root {
   color-scheme: light;
@@ -101,7 +93,6 @@ strong { font-weight: 500; }
 p { margin: 0 0 1rem; }
 h1, h2, h3 { line-height: 1.25; }
 h1 { margin: 0 0 .55rem; font-size: 1.75rem; font-weight: 300; }
-.name-zh { margin-left: .1em; font-size: .86em; font-family: "Noto Sans SC Name", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; font-weight: 300; }
 h2 { margin: 0 0 .6rem; font-size: 1.4rem; font-weight: 300; }
 h3 { margin: 0; font-size: 1rem; font-weight: 400; }
 svg { width: 21px; height: 21px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
